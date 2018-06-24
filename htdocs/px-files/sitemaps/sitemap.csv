@@ -1,6 +1,5 @@
 "* path","* content","* id","* title","* title_breadcrumb","* title_h1","* title_label","* title_full","* logical_path","* list_flg","* layout","* orderby","* keywords","* description","* category_top_flg","* role","* proc_type","* **delete_flg"
 "/index.html",,,"HOME",,,,,,"1","top",,,,,,,
-"/overview/about/index.html",,,"はじめに",,"Pickles 2 とは？",,,,"1","fullcolumn",,,,"1",,,
-"/download/index.html",,,"ダウンロード",,,,,,"1",,,,,"1",,,
-"/manual/index.html",,,"使い方",,"Pickles 2 の使い方",,,,"1",,,,,"1",,,
+"/overview/about/index.html",,,"はじめに",,"Paprika Framework とは？",,,,"1","fullcolumn",,,,"1",,,
+"/manual/index.html",,,"使い方",,"Paprika Framework の使い方",,,,"1",,,,,"1",,,
 "/search/index.html",,,"サイト内検索",,,,,,,,,,,,,,
