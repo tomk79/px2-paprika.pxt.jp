@@ -36,25 +36,3 @@
 		<li><a href="./download/">その他のダウンロード</a></li>
 	</ul>
 </div>
-
-<?php
-// --------------------------------------
-// Pickles 2 アプリケーションの manifest を更新
-$json = json_encode(array(
-	'name'=>'Pickles2',
-	"version"=>$px->conf()->project->px2dt_latestversion,
-	"manifestUrl"=>"http://pickles2.pxt.jp/release/app/Pickles2/package.json",
-	"packages"=>array(
-		"mac"=>array(
-            "url"=>"https://github.com/pickles2/app-pickles2/releases/download/".h($px->conf()->project->px2dt_latestversion)."/Pickles2-".h($px->conf()->project->px2dt_latestversion)."-osx64.zip",
-		),
-		"win"=>array(
-		    "url"=>"https://github.com/pickles2/app-pickles2/releases/download/".h($px->conf()->project->px2dt_latestversion)."/Pickles2-".h($px->conf()->project->px2dt_latestversion)."-win32.zip",
-		),
-		"linux32"=>array(
-		    "url"=>"https://github.com/pickles2/app-pickles2/releases/download/".h($px->conf()->project->px2dt_latestversion)."/Pickles2-".h($px->conf()->project->px2dt_latestversion)."-linux64.zip",
-	    ),
-	),
-), JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
-$px->fs()->save_file(__DIR__.'/release/app/Pickles2/package.json', $json);
-?>

@@ -10,10 +10,6 @@
 		}
 	],
     "repositories": [
-		{
-			"type": "git",
-			"url": "https://github.com/tomk79/px2-page-list-generator.git"
-		}
     ],
 	"require": {
 		"php": ">=5.4.0" ,
@@ -27,8 +23,7 @@
 		"pickles2/px2-remove-attr": "dev-develop",
 		"pickles2/px2-sitemapexcel": "dev-develop",
 		"tomk79/h": "*",
-		"tomk79/csv2json": "1.*",
-		"tomk79/px2-page-list-generator": "dev-develop"
+		"tomk79/csv2json": "1.*"
 	},
 	"require-dev": {
 	},
