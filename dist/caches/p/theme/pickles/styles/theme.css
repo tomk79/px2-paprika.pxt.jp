@@ -54,7 +54,7 @@ body.top .theme_mainblock {
  */
 .theme_si {
   float: left;
-  width: 160px;
+  width: auto;
   max-width: 90%;
   box-sizing: content-box; }
 
