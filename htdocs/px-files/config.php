@@ -5,8 +5,8 @@ return call_user_func( function(){
 	$conf = new stdClass;
 
 	// project
-	$conf->name = 'Pickles 2'; // サイト名
-	$conf->domain ='pickles2.pxt.jp'; // ドメイン
+	$conf->name = 'Paprika Framework'; // サイト名
+	$conf->domain ='px2-paprika.pxt.jp'; // ドメイン
 	$conf->path_controot = '/'; // コンテンツルートディレクトリ
 
 	// paths
