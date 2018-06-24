@@ -1,0 +1,39 @@
+<?php
+	require_once( __DIR__.'/php/custom.php' );
+	$theme_custom = new pickles2\themes\pickles\theme_custom($px, $theme);
+?><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title><?= htmlspecialchars($px->site()->get_current_page_info('title_full')); ?></title>
+<?php include(__DIR__.'/inc/headsection.inc'); ?>
+<?= $px->bowl()->pull('head') ?>
+	</head>
+	<body class="popup">
+		<header class="theme_header" id="page_top">
+			<div class="container">
+				<p class="theme_si"><img src="<?= $theme->files( 'images/logo_2017.svg' ); ?>" alt="<?= htmlspecialchars( $px->conf()->name ) ?>" /></p>
+			</div>
+		</header>
+		<div class="theme_mainblock">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h1><?= preg_replace('/\r\n|\r|\n/s', '<br />', htmlspecialchars($px->site()->get_current_page_info( 'title_h1' )) ); ?></h1>
+						<div class="contents" <?= htmlspecialchars($theme->get_attr_bowl_name_by())?>="main">
+<?= $px->bowl()->pull() ?>
+						</div>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+			<div class="container">
+				<p style="text-align:center;"><button onclick="window.close();return false;">close</button></p>
+				<p style="text-align:center;">&copy;Pickles 2 Project.</p>
+			</div>
+		</footer>
+<?php include(__DIR__.'/inc/footsection.inc'); ?>
+<?= $px->bowl()->pull('foot') ?>
+	</body>
+</html>

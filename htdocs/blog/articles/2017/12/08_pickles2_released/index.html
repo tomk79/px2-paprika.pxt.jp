@@ -1,0 +1,26 @@
+<p>2017年12月8日、 Pickles 2 アプリケーション バージョン 2.0.0-beta.18 がリリースされました。</p>
+<p>このリリースでは、 新しくテーマの編集UIが追加され、モジュール編集機能のUIが改善された他、 <a href="https://github.com/pickles2/__documents/blob/master/system/px2package.md" target="_blank">px2package</a> 情報の読み込みに対応しました。 その他、複数の不具合の修正とパフォーマンス改善が含まれています。</p>
+
+<!-- autoindex -->
+
+
+
+<h2 id="-">このリリースの更新差分</h2>
+<p>このバージョンの主な変更点は下記の通りです。</p>
+<ul>
+<li>テーマ編集機能を追加。</li>
+<li>GUI編集で、imageフィールドがファイル名の重複をチェックするようになった。</li>
+<li>GUI編集で、imageフィールドの JPEG, PNG 画像の自動ロスレス圧縮機能を削除。圧縮に著しく時間がかかり、作業効率を下げるため。</li>
+<li>GUI編集で、finalize.js の第3引数 <code>supply</code> に <code>data</code> を追加。モジュールに入力されたデータ構造にアクセスできるようになった。</li>
+<li>モジュール編集機能のUI改善。</li>
+<li>プロジェクトの <code>px2package</code> を読み込み、 <code>entry_script</code>, <code>home_dir</code> を補完するようになった。</li>
+<li>新しい設定 <code>$conf-&gt;plugins-&gt;px2dt-&gt;path_module_templates_dir</code> に対応。</li>
+<li>コンテンツ編集画面が、エイリアスページに対応した。</li>
+<li>起動時のウィンドウサイズが、スクリーンサイズいっぱいに拡大されるようになった。</li>
+<li>パンくずに欠損などがある場合に、コンテンツ編集画面で画面が動かなくなる不具合を修正。</li>
+<li>その他いくつかの細かい修正。</li>
+</ul>
+<h2 id="-">インストール手順</h2>
+<p><a href="/manual/setup/apps.html">セットアップ手順 &gt; アプリケーションのインストール</a> を参照してください。</p>
+<p>注意： バージョン 2.0.0-beta.17 以降、 アプリケーションの名称が Pickles 2 Desktop Tool から Pickles 2 に変更されたことに伴い、アプリケーションの実行ファイル名も <code>Pickles2DesktopTool.app</code> から <code>Pickles2.app</code>  に (Windowsでは <code>.app</code> ではなく <code>.exe</code>) 変更されています。</p>
+<p>2.0.0-beta.16 以前のバージョンをご利用の場合、古いバージョンのアプリケーションは削除し、 新しいバージョンのファイルと置き換えてください。</p>

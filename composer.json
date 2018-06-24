@@ -1,0 +1,39 @@
+{
+	"name": "tomk79/px2-paprika.pxt.jp",
+	"description": "Paprika Framework Official Site",
+	"keywords": ["pickles2"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Tomoya Koyanagi",
+			"email": "tomk79@gmail.com"
+		}
+	],
+    "repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/tomk79/px2-page-list-generator.git"
+		}
+    ],
+	"require": {
+		"php": ">=5.4.0" ,
+		"broccoli-html-editor/broccoli-module-fess": "dev-develop",
+		"broccoli-html-editor/broccoli-module-plain-html-elements": "dev-develop",
+		"pickles2/px-fw-2.x": "dev-develop",
+		"pickles2/px2-path-resolver": "dev-develop",
+		"pickles2/px2-px2dthelper": "dev-develop",
+		"pickles2/px2-dec": "dev-develop",
+		"pickles2/px2-multitheme": "dev-develop",
+		"pickles2/px2-remove-attr": "dev-develop",
+		"pickles2/px2-sitemapexcel": "dev-develop",
+		"tomk79/h": "*",
+		"tomk79/csv2json": "1.*",
+		"tomk79/px2-page-list-generator": "dev-develop"
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"files": [
+		]
+	}
+}

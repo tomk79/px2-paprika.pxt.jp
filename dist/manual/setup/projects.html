@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>プロジェクトのセットアップ | Pickles 2</title>
+
+<meta property="og:site_name" content="Pickles 2" />
+<meta property="og:title" content="プロジェクトのセットアップ | Pickles 2" />
+<meta property="og:type" content="blog" />
+<meta property="og:url" content="http://pickles2.pxt.jp/manual/setup/projects.html" />
+<meta property="og:image" content="http://pickles2.pxt.jp/common/images/og_image.png" />
+<link rel="canonical" href="http://pickles2.pxt.jp/manual/setup/projects.html" />
+<link rel="icon" href="../../common/images/favicon.png" type="image/png" />
+<meta name="apple-mobile-web-app-capable" content="no" /><meta name="format-detection" content="telephone=no" /><link rel="apple-touch-icon" href="../../common/images/apple-touch-icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+ 
+<!-- jQuery -->
+<script src="../../common/scripts/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../../common/styles/bootstrap/css/bootstrap.min.css">
+<script src="../../common/styles/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- px2style -->
+<link rel="stylesheet" href="../../common/px2style/dist/styles.css" type="text/css" />
+<script src="../../common/px2style/dist/scripts.js"></script>
+
+<!-- Contents Stylesheets -->
+<link rel="stylesheet" href="../../common/styles/contents.css" type="text/css" />
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3100892-11', 'auto');
+  ga('send', 'pageview');
+</script>
+
+		<!-- Adobe Typekit -->
+		<script src="https://use.typekit.net/erd0xqv.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!-- Bootstrap Theme -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/theme.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/font-awesome-4.6.3/css/font-awesome.min.css" />
+
+		<!-- highlight.js -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/highlight.js/styles/github.css">
+		<script src="../../caches/p/theme/pickles/libs/highlight.js/highlight.pack.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('pre code').each(function(i, block) {
+					hljs.highlightBlock(block);
+				});
+			});
+		</script>
+
+		<script>
+			// Adobe Typekit
+			$(function(){
+				var mutObs = new MutationObserver(function(records, observer){
+					// console.log('MutationObserver() callback');
+					// console.log(records);
+					// console.log(observer);
+
+					for( var idx in records ){
+						var $tgt = $(records[idx].target);
+						// $tgt.find('h1,h2,h3,h4,h5,h6')
+						// 	.removeClass('tk-ryo-gothic-plusn')
+						// 	.removeClass('tk-skolar-sans-latin')
+						// 	.addClass('tk-ryo-gothic-plusn')
+						// ;
+						$tgt.find('.theme_welcome h1').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+						$tgt.find('.theme_welcome p').addClass('tk-ryo-gothic-plusn');
+
+						// $tgt.find('.theme_header').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_footer').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_breadcrumb').addClass('tk-ryo-gothic-plusn');
+						$tgt.find('.theme_si').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+					}
+
+				});
+				mutObs.observe($('body').get(0), {
+					childList: true,
+					subtree: true
+				});
+
+			});
+		</script>
+	</head>
+	<body class="default">
+		<header class="theme_header" id="page_top">
+			<div class="container">
+				<p class="theme_si"><a href="../../"><img src="../../caches/p/theme/pickles/images/logo_2017.svg" alt="Pickles 2" /></a></p>
+				<div class="theme_shouldernavi">
+<ul><li><a href="../../developers/">開発者向けの情報</a></li></ul>				</div>
+				<div class="theme_globalnavi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../" class="current">使い方</a></li><li><a href="../../tools/">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>
+				</div>
+			</div>
+		</header>
+		<div class="theme_mainblock">
+			<div class="container theme_common_navi_frame">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../">使い方</a></li><li><a href="./">セットアップ手順</a></li><li><span>プロジェクトのセットアップ</span></li></ul></div>
+						<h1>プロジェクトのセットアップ</h1>
+
+
+						<div class="contents">
+<p>Pickles 2 プロジェクトのセットアップ手順について説明します。</p>
+
+<p>Pickles 2 のシステムは、デスクトップGUIアプリケーションである Pickles 2 アプリケーション と、 PHP製フレームワークの Pickles Framework 2 で構成されています。</p>
+
+<p>プロジェクトは、 Pickles 2 アプリケーションのGUIから構築する方法の他に、 コマンドラインで手動で構築する方法もあります。</p>
+
+<!-- == autoindex == -->
+<div style="margin:2em 5%; border:1px solid #bbb; padding:1em; background:rgba(124, 124, 124, 0.05); border-radius:5px;">
+<div style="margin:0; padding:0; text-align:center; font-weight:bold;">INDEX</div><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_プロジェクトを作成">Pickles 2 プロジェクトを作成</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_アプリケーションからプロジェクトを作成">Pickles 2 アプリケーションからプロジェクトを作成</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_コマンドラインから手動でプロジェクトを作成">コマンドラインから手動でプロジェクトを作成</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_事前準備：composer_のインストール">事前準備：composer のインストール</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_macOS">macOS</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Windows">Windows</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_Packagist_から_Pickles_2_プロジェクトをインストールする">Packagist から Pickles 2 プロジェクトをインストールする</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Apache_の設定">Apache の設定</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_git_リポジトリを作成する">git リポジトリを作成する</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_.gitkeep_がコミットされない場合">.gitkeep がコミットされない場合</a></li></ul></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_composer_のアップデート">composer のアップデート</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_プロジェクト_のアンインストール">Pickles 2 プロジェクト のアンインストール</a></li></ul>
+</div>
+<!-- / == autoindex == -->
+
+
+<span id="hash_Pickles_2_プロジェクトを作成"></span><h2>Pickles 2 プロジェクトを作成</h2>
+
+<span id="hash_Pickles_2_アプリケーションからプロジェクトを作成"></span><h3>Pickles 2 アプリケーションからプロジェクトを作成</h3>
+
+<p>Pickles 2 アプリケーション を起動すると、はじめに表示されるのがダッシュボード画面です。初めて起動したときには、プロジェクトが登録されていません。ダッシュボードの右側にあるフォームから、新規プロジェクトを作成します。</p>
+
+<ul>
+<li><em>Project Name</em> : プロジェクト名を入力してください。これは、ユーザー自身が識別するための論理名です。</li>
+<li><em>Path</em> : プロジェクトは、ローカルディスク上の任意のパスを指定してください。</li>
+<li><em>Home Directory</em>, <em>Entry Script</em> : それぞれ、 Path に指定した階層からの相対パスで入力します。特別なカスタマイズをしていない場合には、デフォルト値のままでOKです。</li>
+</ul>
+
+<p>プロジェクトを作成すると、画面左の一覧に、作成されたプロジェクトが追加されます。プロジェクト名をクリックして、プロジェクトのホーム画面へ進みます。</p>
+
+<p>プロジェクトのホーム画面では、 Pickles 2 のセットアップを促す画面が表示されます。画面の指示に従って進めると、指定したパスに Pickles 2 プロジェクトがセットアップされます。</p>
+
+<span id="hash_コマンドラインから手動でプロジェクトを作成"></span><h3>コマンドラインから手動でプロジェクトを作成</h3>
+
+<p>Pickles 2 プロジェクト は、Apache + PHP の環境で動作するアプリケーションの雛形で、Pickles 2 アプリケーション を使わなくても単体で使用することができます。</p>
+
+<p>この章では、 Pickles 2 プロジェクトのセットアップ手順について説明します。</p>
+
+<span id="hash_事前準備：composer_のインストール"></span><h4>事前準備：composer のインストール</h4>
+
+<p>composer のインストール方法について 詳しくは <a href="https://getcomposer.org/doc/00-intro.md" target="_blank">composerの公式サイト(英語)</a> を参照してください。</p>
+
+<p>下記は公式サイトからの抜粋です。参考までに。</p>
+
+<span id="hash_macOS"></span><h5>macOS</h5>
+
+<p>macOS の方は、次のコマンドでグローバルインストールできます。</p>
+
+<pre><code class="bash">$ curl -sS https://getcomposer.org/installer | php
+$ mv composer.phar /usr/local/bin/composer
+</code></pre>
+
+<span id="hash_Windows"></span><h5>Windows</h5>
+
+<p>Windows の方は、GUIインストーラ <code>Composer-Setup.exe</code> が用意されています。 次のコマンドでもインストールできますので、お好みの方法でインストールしてください。</p>
+
+<pre><code class="bash">$ cd C:\bin
+$ php -r "readfile('https://getcomposer.org/installer');" | php
+</code></pre>
+
+<span id="hash_Packagist_から_Pickles_2_プロジェクトをインストールする"></span><h4>Packagist から Pickles 2 プロジェクトをインストールする</h4>
+
+<p>Pickles 2 プロジェクトテンプレート は、<code>composer</code> コマンドを使用して Packagist からインストールすることができます。</p>
+
+<p><code>composer</code> コマンドのインストール方法については、<a href="#hash_事前準備：composer_のインストール">事前準備：composer のインストール</a> を御覧ください。</p>
+
+<pre><code class="bash">$ cd /path/to/your/documentRoot
+$ composer create-project pickles2/preset-get-start-pickles2 ./
+$ chmod -R 777 ./px-files/_sys
+$ chmod -R 777 ./common/px_resources/
+</code></pre>
+
+<p>次のコマンドを実行して、バージョン番号が表示されれば成功です。</p>
+
+<pre><code class="bash">$ php .px_execute.php /?PX=api.get.version
+"2.0.31"
+</code></pre>
+
+<span id="hash_Apache_の設定"></span><h4>Apache の設定</h4>
+
+<p>Pickles 2 プロジェクトを Apache + PHP の環境で動作させることができます。 一般的な LAMPP 環境で動作するはずです。</p>
+
+<p>次のコードは Apache の設定例です。</p>
+
+<pre><code class="bash">Listen 8080
+NameVirtualHost *:8080
+
+&lt;Directory "/path/to/your/documentRoot"&gt;
+    AllowOverride All
+    Order deny,allow
+    Deny from all
+    Allow from 127.0.0.1
+    Allow from ::1
+    AddType application/x-httpd-php .php
+&lt;/Directory&gt;
+&lt;VirtualHost *:8080&gt;
+    DocumentRoot "/path/to/your/documentRoot"
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<span id="hash_git_リポジトリを作成する"></span><h3>git リポジトリを作成する</h3>
+
+<p>git を使ってプロジェクトを世代管理する場合は、次の手順で gitリポジトリを初期化してください。</p>
+
+<pre><code class="bash">$ cd /path/to/your/documentRoot
+$ git init
+$ git add --all -v ./
+$ git commit -m "initial commit"
+</code></pre>
+
+<span id="hash_.gitkeep_がコミットされない場合"></span><h4>.gitkeep がコミットされない場合</h4>
+
+<p>キャッシュを生成するディレクトリなど、<code>.gitkeep</code> が設置されています。Gitの除外設定によって、コミットできない場合は、<code>git commit</code> の前に次のコマンドを実行し、追加してください。</p>
+
+<pre><code class="bash">$ cd /path/to/your/documentRoot
+$ git add -fv common/px_resources/.gitkeep
+add 'common/px_resources/.gitkeep'
+$ git add -fv px-files/_sys/ram/*/.gitkeep
+add 'px-files/_sys/ram/applock/.gitkeep'
+add 'px-files/_sys/ram/caches/.gitkeep'
+add 'px-files/_sys/ram/data/.gitkeep'
+add 'px-files/_sys/ram/publish/.gitkeep'
+</code></pre>
+
+<span id="hash_composer_のアップデート"></span><h2>composer のアップデート</h2>
+
+<p>composer は、 PHP のライブラリを管理するパッケージマネージャです。 しばらくすると、バグ修正などが反映された新しいバージョンのライブラリが公開されることがあります。</p>
+
+<p>時々 <code>composer update</code> を実行して、ライブラリを最新バージョンに保つようにしてください。</p>
+
+<p>次の方法でアップデートすることができます。</p>
+
+<ol>
+<li>Pickles 2 アプリケーション を起動し、プロジェクトを選択します。</li>
+<li>次のいずれかの方法で、 <code>composer update</code> を実行してください
+
+<ol>
+<li>右上のハンバーガーメニューをクリック、上から5番目の「composer」を選択し「composer プロジェクト を更新する」ボタンをクリックします。</li>
+<li>「基本的な手順」右下の「composer を操作する」をクリック、「composer プロジェクト を更新する」ボタンをクリックします。</li>
+<li>「composer パッケージのいくつかに、新しいバージョンが見つかりました。いますつ更新することをお勧めします。」のメッセージが表示されている場合は、クリックして「composer プロジェクト を更新する」ボタンをクリックします。</li>
+</ol></li>
+<li>しばらく待って、「composer update 完了しました」のメッセージが表示されればアップデート完了です。</li>
+</ol>
+
+<span id="hash_Pickles_2_プロジェクト_のアンインストール"></span><h2>Pickles 2 プロジェクト のアンインストール</h2>
+
+<p>不要なプロジェクトを削除する場合は、 ディレクトリごと削除します。</p>
+
+<p>Apache にバーチャルホストを設定した場合は、この設定も削除してください。</p>
+						</div>
+
+
+
+					</div>
+					<div class="col-sm-3">
+						<nav class="theme_common_navi">
+							<p><a href="../">使い方</a></p>
+<ul>
+<li><a href="../system_structure/">システムの構成</a></li>
+<li><a href="./" class="current">セットアップ手順</a><ul>
+<li><a href="./apps.html">アプリケーションのインストール</a></li>
+<li><a href="./projects.html" class="current">プロジェクトのセットアップ</a></li>
+</ul>
+</li>
+<li><a href="../configs/">設定</a></li>
+<li><a href="../sitemap/">サイトマップ編集</a></li>
+<li><a href="../theme/">テーマ編集</a></li>
+<li><a href="../contents/">コンテンツ編集</a></li>
+<li><a href="../publish/">パブリッシュ</a></li>
+<li><a href="../cmd_options/">コマンドラインオプション</a></li>
+<li><a href="../plugins/">プラグイン</a></li>
+<li><a href="../pxcommands/">PXコマンド</a></li>
+<li><a href="../guieditor/">GUI編集</a></li>
+<li><a href="../contents_manifesto/">Contents Manifesto</a></li>
+<li><a href="../api_reference/">API リファレンス</a></li>
+</ul>
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			<div class="container">
+				<div class="theme_backtotop"><a href="#page_top"><i class="fa fa-arrow-up"></i> back to top</a></div>
+				<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../">使い方</a></li><li><a href="./">セットアップ手順</a></li><li><span>プロジェクトのセットアップ</span></li></ul></div>
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+			<div class="theme_container">
+				<nav class="theme_megafooter_navi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../" class="current">使い方</a></li><li><a href="../../tools/">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>				</nav>
+			</div>
+			<div class="theme_container theme_footer_shouldernavi">
+<ul><li><a href="../../">HOME</a></li><li><a href="../../developers/">開発者向けの情報</a></li></ul>			</div>
+			<div class="theme_container theme_footer_searcher">
+				<form action="../../search/" class="form-inline">
+					<div class="form-group">
+						<label>サイト内検索</label>
+						<input type="text" name="q" value="" class="form-control" />
+						<button class="form-control">検索</button>
+					</div>
+				</form>
+			</div>
+			<div class="theme_container">
+				<div class="theme_social_icons">
+					<a href="https://twitter.com/pxfw" target="_blank" title="Pickles 2 on Twitter"><i class="fa fa-twitter"></i></a>
+					<a href="https://github.com/pickles2" target="_blank" title="Pickles 2 on github"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+			<div class="theme_container">
+				<p style="text-align:center;">&copy;Pickles 2 Project.</p>
+			</div>
+		</footer>
+		<script src="../../caches/p/theme/pickles/scripts/smoothScroll.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/global.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/jquery.sidebarFix.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.theme_common_navi').sidebarFix({
+					'frame': $('.theme_common_navi_frame'),
+					'topBuffer': 98
+				});
+			});
+		</script>
+	</body>
+</html>

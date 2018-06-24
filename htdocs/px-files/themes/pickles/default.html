@@ -1,0 +1,114 @@
+<?php
+	require_once( __DIR__.'/php/custom.php' );
+	$theme_custom = new pickles2\themes\pickles\theme_custom($px, $theme);
+?><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title><?= htmlspecialchars($px->site()->get_current_page_info('title_full')); ?></title>
+<?php include(__DIR__.'/inc/headsection.inc'); ?>
+<?= $px->bowl()->pull('head') ?>
+	</head>
+	<body class="default">
+		<header class="theme_header" id="page_top">
+			<div class="container">
+				<p class="theme_si"><a href="<?= htmlspecialchars($px->href('')); ?>"><img src="<?= $theme->files( 'images/logo_2017.svg' ); ?>" alt="<?= htmlspecialchars( $px->conf()->name ) ?>" /></a></p>
+				<div class="theme_shouldernavi">
+<?php
+	$shoulder_menu = $px->site()->get_shoulder_menu();
+	echo( '<ul>' );
+	foreach( $shoulder_menu as $page_id ){
+		echo( '<li>'.$px->mk_link( $page_id ).'</li>' );
+	}
+	echo( '</ul>' );
+?>
+				</div>
+				<div class="theme_globalnavi">
+<?php
+	$global_menu = $px->site()->get_global_menu();
+	echo( '<ul>' );
+	foreach( $global_menu as $page_id ){
+		echo( '<li>'.$px->mk_link( $page_id ).'</li>' );
+	}
+	echo( '</ul>' );
+?>
+
+				</div>
+			</div>
+		</header>
+		<div class="theme_mainblock">
+			<div class="container theme_common_navi_frame">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="theme_breadcrumb"><?= $theme->mk_breadcrumb() ?></div>
+						<h1><?= preg_replace('/\r\n|\r|\n/s', '<br />', htmlspecialchars($px->site()->get_current_page_info( 'title_h1' )) ); ?></h1>
+
+<?php
+if( @strlen($px->site()->get_current_page_info('release_date')) ){
+	print '<div class="theme_article_date">'.$theme_custom->mk_article_date().'</div>';
+}
+?>
+
+						<div class="contents" <?= htmlspecialchars($theme->get_attr_bowl_name_by())?>="main">
+<?= $px->bowl()->pull() ?>
+						</div>
+
+<?php if( $px->site()->get_current_page_info('article_flg') ){ ?>
+<div class="row">
+	<div class="col-sm-6">
+		<h2>フィードバックのお願い</h2>
+		<p>バグや誤植を見つけたり、機能を改善するアイデアなど、ユーザーのみなさんからの声を伝えてください。頂いたご意見をもとに、よりよい機能の開発や優先順位の決定にあたって参考にさせていただきます。</p>
+		<p>フィードバックは、 ユーザーフォーラム または Twitter でお送りいただけます。 詳しくは<a href="/usergroups/">ユーザーグループのページ</a>を参照してください。</p>
+	</div>
+	<div class="col-sm-6">
+		<h2>開発者募集のお知らせ</h2>
+		<p>Pickles 2 プロジェクトは開発に参加してくれるメンバーを募集しています。 <a href="https://twitter.com/pxfw" target="_blank">Twitter</a> で、または 直接お声がけください。</p>
+		<h2>RSS Feed</h2>
+		<ul>
+			<li><a href="<?= htmlspecialchars( $px->href('/rss/px2_dev_blog_atom0100.xml') ) ?>">Atom 1.0</a></li>
+			<li><a href="<?= htmlspecialchars( $px->href('/rss/px2_dev_blog_rss0100.rdf') ) ?>">RSS 1.0</a></li>
+			<li><a href="<?= htmlspecialchars( $px->href('/rss/px2_dev_blog_rss0200.xml') ) ?>">RSS 2.0</a></li>
+		</ul>
+	</div>
+</div>
+<?php } ?>
+
+<?php
+if( @strlen($px->site()->get_current_page_info('release_date')) ){
+	print '<div class="theme_article_date">'.$theme_custom->mk_article_date().'</div>';
+}
+?>
+
+					</div>
+					<div class="col-sm-3">
+						<nav class="theme_common_navi">
+<?php
+	$category_top_id = $px->site()->get_category_top();
+?>
+							<p><a href="<?= htmlspecialchars( $px->href($category_top_id) ) ?>"><?= htmlspecialchars($px->site()->get_page_info($category_top_id, 'title_label')) ?></a></p>
+<?= $theme->mk_sub_menu( $category_top_id ) ?>
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			<div class="container">
+				<div class="theme_backtotop"><a href="#page_top"><i class="fa fa-arrow-up"></i> back to top</a></div>
+				<div class="theme_breadcrumb"><?= $theme->mk_breadcrumb() ?></div>
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+<?php include(__DIR__.'/inc/default_footer.inc'); ?>
+		</footer>
+<?php include(__DIR__.'/inc/footsection.inc'); ?>
+		<script src="<?= htmlspecialchars( $theme->files('/scripts/jquery.sidebarFix.js') ); ?>"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.theme_common_navi').sidebarFix({
+					'frame': $('.theme_common_navi_frame'),
+					'topBuffer': 98
+				});
+			});
+		</script>
+<?= $px->bowl()->pull('foot') ?>
+	</body>
+</html>

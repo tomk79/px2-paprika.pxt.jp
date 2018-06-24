@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>サイトマップ編集 | Pickles 2</title>
+
+<meta property="og:site_name" content="Pickles 2" />
+<meta property="og:title" content="サイトマップ編集 | Pickles 2" />
+<meta property="og:type" content="blog" />
+<meta property="og:url" content="http://pickles2.pxt.jp/manual/sitemap/" />
+<meta property="og:image" content="http://pickles2.pxt.jp/common/images/og_image.png" />
+<link rel="canonical" href="http://pickles2.pxt.jp/manual/sitemap/" />
+<link rel="icon" href="../../common/images/favicon.png" type="image/png" />
+<meta name="apple-mobile-web-app-capable" content="no" /><meta name="format-detection" content="telephone=no" /><link rel="apple-touch-icon" href="../../common/images/apple-touch-icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+ 
+<!-- jQuery -->
+<script src="../../common/scripts/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../../common/styles/bootstrap/css/bootstrap.min.css">
+<script src="../../common/styles/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- px2style -->
+<link rel="stylesheet" href="../../common/px2style/dist/styles.css" type="text/css" />
+<script src="../../common/px2style/dist/scripts.js"></script>
+
+<!-- Contents Stylesheets -->
+<link rel="stylesheet" href="../../common/styles/contents.css" type="text/css" />
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3100892-11', 'auto');
+  ga('send', 'pageview');
+</script>
+
+		<!-- Adobe Typekit -->
+		<script src="https://use.typekit.net/erd0xqv.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!-- Bootstrap Theme -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/theme.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/font-awesome-4.6.3/css/font-awesome.min.css" />
+
+		<!-- highlight.js -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/highlight.js/styles/github.css">
+		<script src="../../caches/p/theme/pickles/libs/highlight.js/highlight.pack.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('pre code').each(function(i, block) {
+					hljs.highlightBlock(block);
+				});
+			});
+		</script>
+
+		<script>
+			// Adobe Typekit
+			$(function(){
+				var mutObs = new MutationObserver(function(records, observer){
+					// console.log('MutationObserver() callback');
+					// console.log(records);
+					// console.log(observer);
+
+					for( var idx in records ){
+						var $tgt = $(records[idx].target);
+						// $tgt.find('h1,h2,h3,h4,h5,h6')
+						// 	.removeClass('tk-ryo-gothic-plusn')
+						// 	.removeClass('tk-skolar-sans-latin')
+						// 	.addClass('tk-ryo-gothic-plusn')
+						// ;
+						$tgt.find('.theme_welcome h1').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+						$tgt.find('.theme_welcome p').addClass('tk-ryo-gothic-plusn');
+
+						// $tgt.find('.theme_header').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_footer').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_breadcrumb').addClass('tk-ryo-gothic-plusn');
+						$tgt.find('.theme_si').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+					}
+
+				});
+				mutObs.observe($('body').get(0), {
+					childList: true,
+					subtree: true
+				});
+
+			});
+		</script>
+	</head>
+	<body class="default">
+		<header class="theme_header" id="page_top">
+			<div class="container">
+				<p class="theme_si"><a href="../../"><img src="../../caches/p/theme/pickles/images/logo_2017.svg" alt="Pickles 2" /></a></p>
+				<div class="theme_shouldernavi">
+<ul><li><a href="../../developers/">開発者向けの情報</a></li></ul>				</div>
+				<div class="theme_globalnavi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../" class="current">使い方</a></li><li><a href="../../tools/">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>
+				</div>
+			</div>
+		</header>
+		<div class="theme_mainblock">
+			<div class="container theme_common_navi_frame">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../">使い方</a></li><li><span>サイトマップ編集</span></li></ul></div>
+						<h1>サイトマップ編集</h1>
+
+
+						<div class="contents">
+<p>サイトマップは、ウェブサイト全体のページ構成を定義する概念です。</p>
+<p>1ページ1行の表形式で表現され、CSV または Microsoft Excel のファイル形式で編集できます。</p>
+<!-- == autoindex == -->
+<div style="margin:2em 5%; border:1px solid #bbb; padding:1em; background:rgba(124, 124, 124, 0.05); border-radius:5px;">
+<div style="margin:0; padding:0; text-align:center; font-weight:bold;">INDEX</div><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_サイトマップCSVの格納ディレクトリ">サイトマップCSVの格納ディレクトリ</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_CSVの形式">CSVの形式</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_規定の定義">規定の定義</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_path_-_ページのパス">path - ページのパス</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_content_-_コンテンツファイルの格納先">content - コンテンツファイルの格納先</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_id_-_ページID">id - ページID</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_title_-_ページタイトル">title - ページタイトル</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_title_breadcrumb_-_ページタイトル(パン屑表示用)">title_breadcrumb - ページタイトル(パン屑表示用)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_title_h1_-_ページタイトル(H1表示用)">title_h1 - ページタイトル(H1表示用)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_title_label_-_ページタイトル(リンク表示用)">title_label - ページタイトル(リンク表示用)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_title_full_-_ページタイトル(タイトルタグ用)">title_full - ページタイトル(タイトルタグ用)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_logical_path_-_論理構造上のパス">logical_path - 論理構造上のパス</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_list_flg_-_一覧表示フラグ">list_flg - 一覧表示フラグ</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_layout_-_レイアウト">layout - レイアウト</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_orderby_-_表示順">orderby - 表示順</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_keywords_-_metaキーワード">keywords - metaキーワード</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_description_-_metaディスクリプション">description - metaディスクリプション</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_category_top_flg_-_カテゴリトップフラグ">category_top_flg - カテゴリトップフラグ</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_role_-_ロール">role - ロール</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_proc_type_-_コンテンツの処理方法">proc_type - コンテンツの処理方法</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_特殊機能">特殊機能</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_エイリアス機能">エイリアス機能</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_ダイナミックパス機能">ダイナミックパス機能</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_アクター機能">アクター機能</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_その他のヒント">その他のヒント</a></li></ul>
+</div>
+<!-- / == autoindex == -->
+
+
+<span id="hash_サイトマップCSVの格納ディレクトリ"></span><h2 id="-csv-">サイトマップCSVの格納ディレクトリ</h2>
+<p>サイトマップCSVは、ホームディレクトリ(<code>px-files/</code>) の中にある、 <code>sitemaps/</code> ディレクトリ直下に格納します。</p>
+<p>サイトマップは複数のCSVファイルに分割して管理することができます。 <code>px-files/sitemaps/</code> の直下にある 拡張子 <code>*.csv</code> のファイルはすべて収集され、併せて1つのサイトマップツリーとして処理されます。</p>
+
+<span id="hash_CSVの形式"></span><h2 id="csv-">CSVの形式</h2>
+<ul>
+<li>CSVファイルはUTF-8で保存してください。</li>
+<li>1行目は定義行として、2行目以降にページデータを記述してください。</li>
+<li>定義行は、<code>* 定義名</code> のように、先頭にアスタリスクを記述します。</li>
+<li><code>* path</code>、<code>* title</code> は必須です。必ず定義に加えてください。</li>
+</ul>
+<span id="hash_規定の定義"></span><h3 id="-">規定の定義</h3>
+
+<table class="def">
+<colgroup>
+<col style="width:9.75609756097561%;" />
+<col style="width:34.14634146341464%;" />
+<col style="width:56.09756097560976%;" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">列</th>
+<th style="text-align: center;">キー</th>
+<th style="text-align: center;">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th style="text-align: center;">A</th>
+<td>path</td>
+<td>ページのパス</td>
+</tr>
+<tr>
+<th style="text-align: center;">B</th>
+<td>content</td>
+<td>コンテンツファイルの格納先</td>
+</tr>
+<tr>
+<th style="text-align: center;">C</th>
+<td>id</td>
+<td>ページID</td>
+</tr>
+<tr>
+<th style="text-align: center;">D</th>
+<td>title</td>
+<td>ページタイトル</td>
+</tr>
+<tr>
+<th style="text-align: center;">E</th>
+<td>title_breadcrumb</td>
+<td>ページタイトル(パン屑表示用)</td>
+</tr>
+<tr>
+<th style="text-align: center;">F</th>
+<td>title_h1</td>
+<td>ページタイトル(H1表示用)</td>
+</tr>
+<tr>
+<th style="text-align: center;">G</th>
+<td>title_label</td>
+<td>ページタイトル(リンク表示用)</td>
+</tr>
+<tr>
+<th style="text-align: center;">H</th>
+<td>title_full</td>
+<td>ページタイトル(タイトルタグ用)</td>
+</tr>
+<tr>
+<th style="text-align: center;">I</th>
+<td>logical_path</td>
+<td>論理構造上のパス</td>
+</tr>
+<tr>
+<th style="text-align: center;">J</th>
+<td>list_flg</td>
+<td>一覧表示フラグ</td>
+</tr>
+<tr>
+<th style="text-align: center;">K</th>
+<td>layout</td>
+<td>レイアウト</td>
+</tr>
+<tr>
+<th style="text-align: center;">L</th>
+<td>orderby</td>
+<td>表示順</td>
+</tr>
+<tr>
+<th style="text-align: center;">M</th>
+<td>keywords</td>
+<td>metaキーワード</td>
+</tr>
+<tr>
+<th style="text-align: center;">N</th>
+<td>description</td>
+<td>metaディスクリプション</td>
+</tr>
+<tr>
+<th style="text-align: center;">O</th>
+<td>category_top_flg</td>
+<td>カテゴリトップフラグ</td>
+</tr>
+<tr>
+<th style="text-align: center;">P</th>
+<td>role</td>
+<td>ロール</td>
+</tr>
+<tr>
+<th style="text-align: center;">Q</th>
+<td>proc_type</td>
+<td>コンテンツの処理方法</td>
+</tr>
+</tbody>
+
+</table>
+<span id="hash_path_-_ページのパス"></span><h3 id="path-">path - ページのパス</h3>
+<p>ページのパスを入力します。必須項目です。</p>
+<p>パスは、スラッシュから始まる絶対パスで記入します。URLの origin 部分は含みません。
+Pickles 2 は、ページのユニークな識別子として <code>path</code> を利用しますので、同じパスのページを複数定義することはできません。</p>
+<p>もし、プロジェクト設定の <code>$conf-&gt;path_controot</code> に深い階層が設定されている場合、絶対パスの起点はこのディレクトリになります。</p>
+<p><code>path</code> には、後述するエイリアスとダイナミックパスをセットすることができます。</p>
+<span id="hash_content_-_コンテンツファイルの格納先"></span><h3 id="content-">content - コンテンツファイルの格納先</h3>
+<p>コンテンツファイルのパスを入力します。省略した場合、<code>path</code> が示すパスにあるコンテンツファイルを参照します。</p>
+<span id="hash_id_-_ページID"></span><h3 id="id-id">id - ページID</h3>
+<p>ページのIDを入力します。 <code>path</code> と同様、ページを一意に識別するための記号なので、必ずユニークな値でなければなりません。</p>
+<p>ただし、省略することが可能です。省略時、 Pickles 2 が自動的に連番を含む文字列をIDとして与えます。</p>
+<p>トップページは例外的に、常に 空白文字列 として定義されます。</p>
+<span id="hash_title_-_ページタイトル"></span><h3 id="title-">title - ページタイトル</h3>
+<p>ページのタイトルです。 titleタグや、h1タグ、パンくず、ナビゲーション上のリンクラベルなどに利用されます。</p>
+<span id="hash_title_breadcrumb_-_ページタイトル(パン屑表示用)"></span><h3 id="title-_breadcrumb-">title_breadcrumb - ページタイトル(パン屑表示用)</h3>
+<p>パンくず表示用のタイトル文字列です。省略時、 <code>title</code> と同じ文字列が採用されます。</p>
+<span id="hash_title_h1_-_ページタイトル(H1表示用)"></span><h3 id="title-_h1-h1-">title_h1 - ページタイトル(H1表示用)</h3>
+<p>H1タグ表示用のタイトル文字列です。省略時、 <code>title</code> と同じ文字列が採用されます。
+H1タグは、他の用途と異なり、改行を表現することができるエリアです。サイトマップCSV上では改行コードを入力して改行を表現できます。テーマテンプレート上では、明示的に、改行コードを <code>&lt;br /&gt;</code> に変換して出力する必要があります。</p>
+<span id="hash_title_label_-_ページタイトル(リンク表示用)"></span><h3 id="title-_label-">title_label - ページタイトル(リンク表示用)</h3>
+<p>リンクラベル用のタイトル文字列です。省略時、 <code>title</code> と同じ文字列が採用されます。</p>
+<span id="hash_title_full_-_ページタイトル(タイトルタグ用)"></span><h3 id="title-_full-">title_full - ページタイトル(タイトルタグ用)</h3>
+<p>titleタグ用のタイトル文字列です。省略時、 <code>title</code> とサイト名を組み合わせて自動生成されます。</p>
+<span id="hash_logical_path_-_論理構造上のパス"></span><h3 id="logical-_path-">logical_path - 論理構造上のパス</h3>
+<p>パンくず上のパス情報を入力します。</p>
+<p>トップページと自分自身を除く間の階層のページパスまたはページIDを、 <code>&gt;</code> 記号で繋いだ形式で表現します。</p>
+<span id="hash_list_flg_-_一覧表示フラグ"></span><h3 id="list-_flg-">list_flg - 一覧表示フラグ</h3>
+<p>ローカルナビ等の一覧に表示するかしないかを決めるフラグです。 <code>1</code> をセットした場合表示され、<code>0</code> または 空白 とした場合には、表示されなくなります。</p>
+<span id="hash_layout_-_レイアウト"></span><h3 id="layout-">layout - レイアウト</h3>
+<p>テーマレイアウトを選択するスイッチです。任意の文字列でレイアウトを指定できます。
+例えば <code>top</code> と入力した場合、テーマレイアウトの <code>top.html</code> が適用されます。</p>
+<p>省略時は、 <code>default.html</code> が適用されます。</p>
+<span id="hash_orderby_-_表示順"></span><h3 id="orderby-">orderby - 表示順</h3>
+<p>ページの表示順を、数値で指示します。
+省略時、サイトマップCSVに記入したままの並び順になります。</p>
+<span id="hash_keywords_-_metaキーワード"></span><h3 id="keywords-meta-">keywords - metaキーワード</h3>
+<p>metaタグの keywords 文字列として利用されます。</p>
+<span id="hash_description_-_metaディスクリプション"></span><h3 id="description-meta-">description - metaディスクリプション</h3>
+<p>metaタグの description 文字列として利用されます。</p>
+<span id="hash_category_top_flg_-_カテゴリトップフラグ"></span><h3 id="category-_top-_flg-">category_top_flg - カテゴリトップフラグ</h3>
+<p><code>1</code> (=カテゴリトップページ)または <code>0</code> (=下層の通常ページ)で指定します。省略時は <code>0</code> と同じです。</p>
+<p>論理階層がトップページ直下の2階層目で、かつ <code>list_flg</code> が <code>1</code> にセットされているページでは、 <code>category_top_flg</code> が <code>1</code> の場合、グローバルナビゲーションに含められ、<code>category_top_flg</code> が <code>0</code> の場合は、ショルダーナビゲーションに含められます。</p>
+<span id="hash_role_-_ロール"></span><h3 id="role-">role - ロール</h3>
+<p>後述する アクター機能を使います。</p>
+<span id="hash_proc_type_-_コンテンツの処理方法"></span><h3 id="proc-_type-">proc_type - コンテンツの処理方法</h3>
+<p><code>$conf-&gt;paths_proc_type</code> と同様の効果を、サイトマップ上で設定できます。</p>
+
+<span id="hash_特殊機能"></span><h2 id="-">特殊機能</h2>
+<span id="hash_エイリアス機能"></span><h3 id="-">エイリアス機能</h3>
+<p><code>path</code> が <code>alias:</code> の後に参照先ページの <code>path</code> または <code>id</code> が続く形式の場合、そのページは 指示された参照先ページへの エイリアスとして扱われます。</p>
+<p>エイリアスページは、パンくずやナビゲーション上には存在しますが、URLを持っていません。このリンクをクリックすると、エイリアスの参照先ページへ遷移します。</p>
+<p>例: <code>alias:/hoge/index.html</code> = <code>/hoge/index.html</code> のエイリアス。</p>
+<span id="hash_ダイナミックパス機能"></span><h3 id="-">ダイナミックパス機能</h3>
+<p>パスの中に、ワイルドカード <code>{*xxxx}</code> や <code>{$xxxx}</code> を含めることで、ダイナミックパス機能を利用できます。</p>
+<p>ダイナミックパスは、ワイルドカードにマッチURLのアクセスを処理します。ルーティングのような役割を果たします。</p>
+<p>ワイルドカードにマッチした値は、 <code>$px-&gt;site()-&gt;get_path_param()</code> で受け取ることができます。</p>
+<p>例: ダイナミックパス <code>/hoge/fuga/{*xxxx}</code> が定義されているとき、リクエスト <code>/hoge/fuga/foo/bar.html</code> を処理するとき、 <code>$px-&gt;site()-&gt;get_path_param(&#39;xxxx&#39;)</code> は、 <code>foo/bar.html</code> を返します。</p>
+<p><code>xxxx</code> は任意の文字列で、1つのURLの中でユニークである必要があります。
+<code>xxxx</code> に空文字を使い、 <code>{*}</code> のように使用することもできます。 この場合、 引数なしの <code>$px-&gt;site()-&gt;get_path_param()</code> で受け取ることができます。</p>
+<p><code>{$xxxx}</code> は スラッシュを含まないディレクトリ名またはファイル名にマッチします。 <code>{*xxxx}</code> は、スラッシュも含めた文字列にマッチします。</p>
+<span id="hash_アクター機能"></span><h3 id="-">アクター機能</h3>
+<p>ロール(<code>role</code>)列に、参照先ページの <code>path</code> または <code>id</code> が入力されている場合、そのページは参照先ページのアクター(役者)になります。</p>
+<p>アクターは、URLとページコンテンツの実体を持ちますが、パンくず構造上はロール(参照先)と同じページとして振る舞います。</p>
+
+<span id="hash_その他のヒント"></span><h2 id="-">その他のヒント</h2>
+<ul>
+<li>定義列は、任意に並べ替えることができます。</li>
+<li>定義は任意の名称で追加することができ、コンテンツやテーマから簡単に参照できます。例えば、 <code>* custom_col</code> と定義した列の値は、<code class="selectable">$px-&gt;site()-&gt;get_page_info( &#39;page_id&#39;, &#39;custom_col&#39; )</code> や <code class="selectable">$px-&gt;site()-&gt;get_current_page_info( &#39;custom_col&#39; )</code> で取得することができます。</li>
+<li>サイトマップの拡張項目 <code>* editor-comment</code> に文字列を入力しておくと、 Pickles 2 Desktop Tool のコンテンツの編集画面上に表示することができます。コンテンツを編集する担当者へのメッセージ欄として利用できます。</li>
+<li>サイトマップCSVを分割した場合、ファイル名でソートされ、昇順で処理されます。 重複するページが記述されている場合、後に処理された方が有効になります。</li>
+<li>サイトマップCSVを更新すると、初回アクセス時に解析され、キャッシュが作成されます。2回目以降のアクセスではキャッシュを参照するため高速ですが、初回アクセス時には応答にしばらく時間がかかることがあります。かかる時間はサイトマップに含まれるページ数に比例します。</li>
+</ul>
+
+						</div>
+
+
+
+					</div>
+					<div class="col-sm-3">
+						<nav class="theme_common_navi">
+							<p><a href="../">使い方</a></p>
+<ul>
+<li><a href="../system_structure/">システムの構成</a></li>
+<li><a href="../setup/">セットアップ手順</a></li>
+<li><a href="../configs/">設定</a></li>
+<li><a href="./" class="current">サイトマップ編集</a></li>
+<li><a href="../theme/">テーマ編集</a></li>
+<li><a href="../contents/">コンテンツ編集</a></li>
+<li><a href="../publish/">パブリッシュ</a></li>
+<li><a href="../cmd_options/">コマンドラインオプション</a></li>
+<li><a href="../plugins/">プラグイン</a></li>
+<li><a href="../pxcommands/">PXコマンド</a></li>
+<li><a href="../guieditor/">GUI編集</a></li>
+<li><a href="../contents_manifesto/">Contents Manifesto</a></li>
+<li><a href="../api_reference/">API リファレンス</a></li>
+</ul>
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			<div class="container">
+				<div class="theme_backtotop"><a href="#page_top"><i class="fa fa-arrow-up"></i> back to top</a></div>
+				<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../">使い方</a></li><li><span>サイトマップ編集</span></li></ul></div>
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+			<div class="theme_container">
+				<nav class="theme_megafooter_navi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../" class="current">使い方</a></li><li><a href="../../tools/">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>				</nav>
+			</div>
+			<div class="theme_container theme_footer_shouldernavi">
+<ul><li><a href="../../">HOME</a></li><li><a href="../../developers/">開発者向けの情報</a></li></ul>			</div>
+			<div class="theme_container theme_footer_searcher">
+				<form action="../../search/" class="form-inline">
+					<div class="form-group">
+						<label>サイト内検索</label>
+						<input type="text" name="q" value="" class="form-control" />
+						<button class="form-control">検索</button>
+					</div>
+				</form>
+			</div>
+			<div class="theme_container">
+				<div class="theme_social_icons">
+					<a href="https://twitter.com/pxfw" target="_blank" title="Pickles 2 on Twitter"><i class="fa fa-twitter"></i></a>
+					<a href="https://github.com/pickles2" target="_blank" title="Pickles 2 on github"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+			<div class="theme_container">
+				<p style="text-align:center;">&copy;Pickles 2 Project.</p>
+			</div>
+		</footer>
+		<script src="../../caches/p/theme/pickles/scripts/smoothScroll.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/global.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/jquery.sidebarFix.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.theme_common_navi').sidebarFix({
+					'frame': $('.theme_common_navi_frame'),
+					'topBuffer': 98
+				});
+			});
+		</script>
+	</body>
+</html>

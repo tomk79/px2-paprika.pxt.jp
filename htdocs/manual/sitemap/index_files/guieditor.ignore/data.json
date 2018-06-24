@@ -1,0 +1,93 @@
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "サイトマップは、ウェブサイト全体のページ構成を定義する概念です。\n\n1ページ1行の表形式で表現され、CSV または Microsoft Excel のファイル形式で編集できます。\n\n<!-- autoindex -->\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## サイトマップCSVの格納ディレクトリ\n\nサイトマップCSVは、ホームディレクトリ(`px-files/`) の中にある、 `sitemaps/` ディレクトリ直下に格納します。\n\nサイトマップは複数のCSVファイルに分割して管理することができます。 `px-files/sitemaps/` の直下にある 拡張子 `*.csv` のファイルはすべて収集され、併せて1つのサイトマップツリーとして処理されます。",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## CSVの形式\n\n- CSVファイルはUTF-8で保存してください。\n- 1行目は定義行として、2行目以降にページデータを記述してください。\n- 定義行は、`* 定義名` のように、先頭にアスタリスクを記述します。\n- `* path`、`* title` は必須です。必ず定義に加えてください。\n\n\n### 規定の定義\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "FESS:parts/table_def",
+      "fields": {
+       "table": {
+        "resKey": "35e38b9f5f66da7c66535857d1024708",
+        "output": "<colgroup>\n<col style=\"width:9.75609756097561%;\" />\n<col style=\"width:34.14634146341464%;\" />\n<col style=\"width:56.09756097560976%;\" />\n</colgroup>\n<thead>\n<tr>\n<th style=\"text-align: center;\">列</th>\n<th style=\"text-align: center;\">キー</th>\n<th style=\"text-align: center;\">意味</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th style=\"text-align: center;\">A</th>\n<td>path</td>\n<td>ページのパス</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">B</th>\n<td>content</td>\n<td>コンテンツファイルの格納先</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">C</th>\n<td>id</td>\n<td>ページID</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">D</th>\n<td>title</td>\n<td>ページタイトル</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">E</th>\n<td>title_breadcrumb</td>\n<td>ページタイトル(パン屑表示用)</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">F</th>\n<td>title_h1</td>\n<td>ページタイトル(H1表示用)</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">G</th>\n<td>title_label</td>\n<td>ページタイトル(リンク表示用)</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">H</th>\n<td>title_full</td>\n<td>ページタイトル(タイトルタグ用)</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">I</th>\n<td>logical_path</td>\n<td>論理構造上のパス</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">J</th>\n<td>list_flg</td>\n<td>一覧表示フラグ</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">K</th>\n<td>layout</td>\n<td>レイアウト</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">L</th>\n<td>orderby</td>\n<td>表示順</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">M</th>\n<td>keywords</td>\n<td>metaキーワード</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">N</th>\n<td>description</td>\n<td>metaディスクリプション</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">O</th>\n<td>category_top_flg</td>\n<td>カテゴリトップフラグ</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">P</th>\n<td>role</td>\n<td>ロール</td>\n</tr>\n<tr>\n<th style=\"text-align: center;\">Q</th>\n<td>proc_type</td>\n<td>コンテンツの処理方法</td>\n</tr>\n</tbody>\n",
+        "header_row": "1",
+        "header_col": "1",
+        "cell_renderer": "text",
+        "renderer": "simplify",
+        "realpath": "/mydoc_TomK/Dropbox/localhosts/pickles2projects/pickles2/pickles2.pxt.jp/htdocs/manual/sitemap/index_files/guieditor.ignore/resources/35e38b9f5f66da7c66535857d1024708/bin.xls"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "### path - ページのパス\n\nページのパスを入力します。必須項目です。\n\nパスは、スラッシュから始まる絶対パスで記入します。URLの origin 部分は含みません。\nPickles 2 は、ページのユニークな識別子として `path` を利用しますので、同じパスのページを複数定義することはできません。\n\nもし、プロジェクト設定の `$conf->path_controot` に深い階層が設定されている場合、絶対パスの起点はこのディレクトリになります。\n\n`path` には、後述するエイリアスとダイナミックパスをセットすることができます。\n\n### content - コンテンツファイルの格納先\n\nコンテンツファイルのパスを入力します。省略した場合、`path` が示すパスにあるコンテンツファイルを参照します。\n\n### id - ページID\n\nページのIDを入力します。 `path` と同様、ページを一意に識別するための記号なので、必ずユニークな値でなければなりません。\n\nただし、省略することが可能です。省略時、 Pickles 2 が自動的に連番を含む文字列をIDとして与えます。\n\nトップページは例外的に、常に 空白文字列 として定義されます。\n\n### title - ページタイトル\n\nページのタイトルです。 titleタグや、h1タグ、パンくず、ナビゲーション上のリンクラベルなどに利用されます。\n\n### title\\_breadcrumb - ページタイトル(パン屑表示用)\n\nパンくず表示用のタイトル文字列です。省略時、 `title` と同じ文字列が採用されます。\n\n### title\\_h1 - ページタイトル(H1表示用)\n\nH1タグ表示用のタイトル文字列です。省略時、 `title` と同じ文字列が採用されます。\nH1タグは、他の用途と異なり、改行を表現することができるエリアです。サイトマップCSV上では改行コードを入力して改行を表現できます。テーマテンプレート上では、明示的に、改行コードを `<br />` に変換して出力する必要があります。\n\n### title\\_label - ページタイトル(リンク表示用)\n\nリンクラベル用のタイトル文字列です。省略時、 `title` と同じ文字列が採用されます。\n\n### title\\_full - ページタイトル(タイトルタグ用)\n\ntitleタグ用のタイトル文字列です。省略時、 `title` とサイト名を組み合わせて自動生成されます。\n\n### logical\\_path - 論理構造上のパス\n\nパンくず上のパス情報を入力します。\n\nトップページと自分自身を除く間の階層のページパスまたはページIDを、 `>` 記号で繋いだ形式で表現します。\n\n### list\\_flg - 一覧表示フラグ\n\nローカルナビ等の一覧に表示するかしないかを決めるフラグです。 `1` をセットした場合表示され、`0` または 空白 とした場合には、表示されなくなります。\n\n### layout - レイアウト\n\nテーマレイアウトを選択するスイッチです。任意の文字列でレイアウトを指定できます。\n例えば `top` と入力した場合、テーマレイアウトの `top.html` が適用されます。\n\n省略時は、 `default.html` が適用されます。\n\n### orderby - 表示順\n\nページの表示順を、数値で指示します。\n省略時、サイトマップCSVに記入したままの並び順になります。\n\n### keywords - metaキーワード\n\nmetaタグの keywords 文字列として利用されます。\n\n### description - metaディスクリプション\n\nmetaタグの description 文字列として利用されます。\n\n### category\\_top\\_flg - カテゴリトップフラグ\n\n`1` (=カテゴリトップページ)または `0` (=下層の通常ページ)で指定します。省略時は `0` と同じです。\n\n論理階層がトップページ直下の2階層目で、かつ `list_flg` が `1` にセットされているページでは、 `category_top_flg` が `1` の場合、グローバルナビゲーションに含められ、`category_top_flg` が `0` の場合は、ショルダーナビゲーションに含められます。\n\n### role - ロール\n\n後述する アクター機能を使います。\n\n### proc\\_type - コンテンツの処理方法\n\n`$conf->paths_proc_type` と同様の効果を、サイトマップ上で設定できます。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## 特殊機能\n\n### エイリアス機能\n\n`path` が `alias:` の後に参照先ページの `path` または `id` が続く形式の場合、そのページは 指示された参照先ページへの エイリアスとして扱われます。\n\nエイリアスページは、パンくずやナビゲーション上には存在しますが、URLを持っていません。このリンクをクリックすると、エイリアスの参照先ページへ遷移します。\n\n例: `alias:/hoge/index.html` = `/hoge/index.html` のエイリアス。\n\n### ダイナミックパス機能\n\nパスの中に、ワイルドカード `{*xxxx}` や `{$xxxx}` を含めることで、ダイナミックパス機能を利用できます。\n\nダイナミックパスは、ワイルドカードにマッチURLのアクセスを処理します。ルーティングのような役割を果たします。\n\nワイルドカードにマッチした値は、 `$px->site()->get_path_param()` で受け取ることができます。\n\n例: ダイナミックパス `/hoge/fuga/{*xxxx}` が定義されているとき、リクエスト `/hoge/fuga/foo/bar.html` を処理するとき、 `$px->site()->get_path_param('xxxx')` は、 `foo/bar.html` を返します。\n\n`xxxx` は任意の文字列で、1つのURLの中でユニークである必要があります。\n`xxxx` に空文字を使い、 `{*}` のように使用することもできます。 この場合、 引数なしの `$px->site()->get_path_param()` で受け取ることができます。\n\n`{$xxxx}` は スラッシュを含まないディレクトリ名またはファイル名にマッチします。 `{*xxxx}` は、スラッシュも含めた文字列にマッチします。\n\n\n### アクター機能\n\nロール(`role`)列に、参照先ページの `path` または `id` が入力されている場合、そのページは参照先ページのアクター(役者)になります。\n\nアクターは、URLとページコンテンツの実体を持ちますが、パンくず構造上はロール(参照先)と同じページとして振る舞います。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## その他のヒント\n\n- 定義列は、任意に並べ替えることができます。\n- 定義は任意の名称で追加することができ、コンテンツやテーマから簡単に参照できます。例えば、 <code>* custom_col</code> と定義した列の値は、<code class=\"selectable\">$px->site()->get_page_info( 'page_id', 'custom_col' )</code> や <code class=\"selectable\">$px->site()->get_current_page_info( 'custom_col' )</code> で取得することができます。\n- サイトマップの拡張項目 `* editor-comment` に文字列を入力しておくと、 Pickles 2 Desktop Tool のコンテンツの編集画面上に表示することができます。コンテンツを編集する担当者へのメッセージ欄として利用できます。\n- サイトマップCSVを分割した場合、ファイル名でソートされ、昇順で処理されます。 重複するページが記述されている場合、後に処理された方が有効になります。\n- サイトマップCSVを更新すると、初回アクセス時に解析され、キャッシュが作成されます。2回目以降のアクセスではキャッシュを参照するため高速ですが、初回アクセス時には応答にしばらく時間がかかることがあります。かかる時間はサイトマップに含まれるページ数に比例します。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     }
+    ]
+   }
+  }
+ }
+}

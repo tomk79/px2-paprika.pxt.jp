@@ -1,0 +1,123 @@
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "Pickles 2 は、静的で大きなウェブサイトを効率よく構築できる オープンソースのウェブデザインツールです。<br />\nデータベース不要、PHP5が動くサーバーに手軽に導入でき、プロトタイプ制作を中心に進めるような柔軟な制作スタイルを実現します。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## ウェブサイトを3つの要素に分解して構築\n\nPickles 2 は、ウェブサイトを「サイトマップ」「コンテンツ」「テーマ」の3要素に分解して構築するフレームワークです。<br />\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "FESS:units/cols3",
+      "fields": {
+       "column1": [
+        {
+         "modId": "PlainHTMLElements:PlainHTML/MultiText",
+         "fields": {
+          "main": {
+           "src": "### サイトマップ\n\nサイト全体のページの一覧、論理的階層構造(パンくず)、各ページに紐付くプロパティ情報(ページタイトルなど)を管理します。CSV形式、または Excel形式のファイルで編集できます。\n",
+           "editor": "markdown"
+          }
+         },
+         "anchor": "",
+         "dec": ""
+        }
+       ],
+       "column2": [
+        {
+         "modId": "PlainHTMLElements:PlainHTML/MultiText",
+         "fields": {
+          "main": {
+           "src": "### コンテンツ\n\nページ要素のうち、内容部分だけが表現されたファイルです。\n1ページに1ファイルが基本ですが、ヘッダーフッターさえ含まない、純粋な内容だけが含まれます。\n",
+           "editor": "markdown"
+          }
+         },
+         "anchor": "",
+         "dec": ""
+        }
+       ],
+       "column3": [
+        {
+         "modId": "PlainHTMLElements:PlainHTML/MultiText",
+         "fields": {
+          "main": {
+           "src": "### テーマ\n\nページ要素のうち、ヘッダー、フッター、ナビゲーションなど、サイト全体を通して共通の規則にしたがって生成されるべき部分を一元管理する概念です。コンテンツ領域以外のHTMLソースを自動的に生成します。\n",
+           "editor": "markdown"
+          }
+         },
+         "anchor": "",
+         "dec": ""
+        }
+       ]
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## パワフルなGUIツール\n\nPickles 2 には、いくつかのパワフルなGUIツールが用意されています。\n\nコーディングが専門ではない方でもコーディングを可能に、コーディングが専門の方にはより効率よく制作を進められるようサポートします。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## 動的にプレビュー、静的にパブリッシュ\n\nPickles 2 は、動的出力にも静的出力にも対応できます。\n\n制作中は動的な環境でプレビューし、完成版を静的なHTMLに出力して公開、のようなスタイルで制作できます。",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## データベースなしで動作します\n\n多くのCMSは、MySQLなどのRDBMS(データベースシステム)を必要とします。Pickles 2 は、HTML5、PHP、CSVを基本に構成されているため、データベースサーバーを用意する必要がありません。\n\nPHP 5.4 以上が動作するウェブサーバーがあれば(あるいは、あなたのパソコン上でも！)、すぐに使いはじめることができます。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## 柔軟な MIT ライセンス\n\nオープンソースのライセンス形態の中でも特に柔軟な、 <a href=\"https://opensource.org/licenses/mit-license.php\" target=\"_blank\">MIT License</a> で配布しています。\n\nご自分のウェブサイトの制作に使うもよし、fork してカスタマイズして、自分だけの独自のツールに改造して使ってもよし。もちろんビジネスに活用してもOKです。公共の利益に反しない限り、制限なく利用することができます。\n\n世界の生活者に、より豊かな体験をもたらす事業のために、より多くの方々に最大活用していただきたいと願っています。\n\nCopyright &copy;2001-2017 Tomoya Koyanagi, and Pickles 2 Project<br />\nMIT License <a href=\"https://opensource.org/licenses/mit-license.php\" target=\"_blank\">https://opensource.org/licenses/mit-license.php</a><br />\n\n<!-- /*\n↑MIT License は、全文または原文へのリンク を貼ることになっているらしいので記載。\n期間は、2001年(Pickles Framework 0.x の開発が始まった年)から開始とした。\n著作権者は Pickles 2 Project だが、2001年当時はなかったので Tomoya Koyanagi を併記した。\n*/ -->",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     }
+    ]
+   }
+  }
+ }
+}

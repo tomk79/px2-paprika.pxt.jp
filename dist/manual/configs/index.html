@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>設定 | Pickles 2</title>
+
+<meta property="og:site_name" content="Pickles 2" />
+<meta property="og:title" content="設定 | Pickles 2" />
+<meta property="og:type" content="blog" />
+<meta property="og:url" content="http://pickles2.pxt.jp/manual/configs/" />
+<meta property="og:image" content="http://pickles2.pxt.jp/common/images/og_image.png" />
+<link rel="canonical" href="http://pickles2.pxt.jp/manual/configs/" />
+<link rel="icon" href="../../common/images/favicon.png" type="image/png" />
+<meta name="apple-mobile-web-app-capable" content="no" /><meta name="format-detection" content="telephone=no" /><link rel="apple-touch-icon" href="../../common/images/apple-touch-icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+ 
+<!-- jQuery -->
+<script src="../../common/scripts/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../../common/styles/bootstrap/css/bootstrap.min.css">
+<script src="../../common/styles/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- px2style -->
+<link rel="stylesheet" href="../../common/px2style/dist/styles.css" type="text/css" />
+<script src="../../common/px2style/dist/scripts.js"></script>
+
+<!-- Contents Stylesheets -->
+<link rel="stylesheet" href="../../common/styles/contents.css" type="text/css" />
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3100892-11', 'auto');
+  ga('send', 'pageview');
+</script>
+
+		<!-- Adobe Typekit -->
+		<script src="https://use.typekit.net/erd0xqv.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!-- Bootstrap Theme -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/theme.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/font-awesome-4.6.3/css/font-awesome.min.css" />
+
+		<!-- highlight.js -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/highlight.js/styles/github.css">
+		<script src="../../caches/p/theme/pickles/libs/highlight.js/highlight.pack.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('pre code').each(function(i, block) {
+					hljs.highlightBlock(block);
+				});
+			});
+		</script>
+
+		<script>
+			// Adobe Typekit
+			$(function(){
+				var mutObs = new MutationObserver(function(records, observer){
+					// console.log('MutationObserver() callback');
+					// console.log(records);
+					// console.log(observer);
+
+					for( var idx in records ){
+						var $tgt = $(records[idx].target);
+						// $tgt.find('h1,h2,h3,h4,h5,h6')
+						// 	.removeClass('tk-ryo-gothic-plusn')
+						// 	.removeClass('tk-skolar-sans-latin')
+						// 	.addClass('tk-ryo-gothic-plusn')
+						// ;
+						$tgt.find('.theme_welcome h1').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+						$tgt.find('.theme_welcome p').addClass('tk-ryo-gothic-plusn');
+
+						// $tgt.find('.theme_header').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_footer').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_breadcrumb').addClass('tk-ryo-gothic-plusn');
+						$tgt.find('.theme_si').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+					}
+
+				});
+				mutObs.observe($('body').get(0), {
+					childList: true,
+					subtree: true
+				});
+
+			});
+		</script>
+	</head>
+	<body class="default">
+		<header class="theme_header" id="page_top">
+			<div class="container">
+				<p class="theme_si"><a href="../../"><img src="../../caches/p/theme/pickles/images/logo_2017.svg" alt="Pickles 2" /></a></p>
+				<div class="theme_shouldernavi">
+<ul><li><a href="../../developers/">開発者向けの情報</a></li></ul>				</div>
+				<div class="theme_globalnavi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../" class="current">使い方</a></li><li><a href="../../tools/">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>
+				</div>
+			</div>
+		</header>
+		<div class="theme_mainblock">
+			<div class="container theme_common_navi_frame">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../">使い方</a></li><li><span>設定</span></li></ul></div>
+						<h1>設定</h1>
+
+
+						<div class="contents">
+<p>Pickles 2 の動きを制御する設定項目について説明します。</p>
+
+<p>Pickles 2 アプリケーションには、大別して次の3種類の設定があります。</p>
+
+<ul>
+<li>Pickles 2 アプリケーション設定</li>
+<li>プロジェクト共有設定 (config.php)</li>
+<li>プロジェクト個人設定</li>
+</ul>
+
+<p>これらはそれぞれ、アプリケーションの振る舞いを変更する設定ですが、設定できる項目や設定する場所が異なります。</p>
+
+<p>それぞれについて説明します。</p>
+
+<!-- == autoindex == -->
+<div style="margin:2em 5%; border:1px solid #bbb; padding:1em; background:rgba(124, 124, 124, 0.05); border-radius:5px;">
+<div style="margin:0; padding:0; text-align:center; font-weight:bold;">INDEX</div><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_アプリケーション設定">Pickles 2 アプリケーション設定</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_プロジェクト共有設定_(config.php)">プロジェクト共有設定 (config.php)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_プロジェクト個人設定">プロジェクト個人設定</a></li></ul>
+</div>
+<!-- / == autoindex == -->
+
+
+<span id="hash_Pickles_2_アプリケーション設定"></span><h2>Pickles 2 アプリケーション設定</h2>
+
+<p>この設定は、デスクトップアプリケーションの動作全体にかかる設定項目が含まれます。サーバー内部のコマンドのパスや、外部アプリケーションの設定、プレビュー用サーバーの設定などが含まれます。</p>
+
+<p>詳しくは、<a href="./pickles2_app_config.html">Pickles 2 アプリケーション設定</a> のページを参照してください。</p>
+
+<span id="hash_プロジェクト共有設定_(config.php)"></span><h2>プロジェクト共有設定 (config.php)</h2>
+
+<p>この設定は、Pickles 2 プロジェクトの振る舞いにかかる設定で、サイトの構造やデザインに影響します。</p>
+
+<p>設定は、プロジェクト自体に含まれるファイル <code>config.php</code> に直接設定内容を記述します。 従って、VCS(Git や SVN など)を通じてチームメンバーとプロジェクトを共有している場合は、すべてのチームメンバーと設定を共有することになります。</p>
+
+<p>詳しくは、<a href="./config_php.html">プロジェクト共有設定 (config.php)</a> のページを参照してください。</p>
+
+<span id="hash_プロジェクト個人設定"></span><h2>プロジェクト個人設定</h2>
+
+<p>この設定は、特定のプロジェクトにかかる設定ではありますが、他のチームメンバーと共有されることのない個人設定が含まれます。</p>
+
+<p>PCのローカルディスク上でプロジェクトを展開するディレクトリのパスなどが含まれます。</p>
+
+<p>詳しくは、<a href="./project_personal_config.html">プロジェクト個人設定</a> のページを参照してください。</p>
+						</div>
+
+
+
+					</div>
+					<div class="col-sm-3">
+						<nav class="theme_common_navi">
+							<p><a href="../">使い方</a></p>
+<ul>
+<li><a href="../system_structure/">システムの構成</a></li>
+<li><a href="../setup/">セットアップ手順</a></li>
+<li><a href="./" class="current">設定</a><ul>
+<li><a href="./pickles2_app_config.html">Pickles 2 アプリケーション設定</a></li>
+<li><a href="./config_php.html">プロジェクト共有設定 (config.php)</a></li>
+<li><a href="./project_personal_config.html">プロジェクト個人設定</a></li>
+</ul>
+</li>
+<li><a href="../sitemap/">サイトマップ編集</a></li>
+<li><a href="../theme/">テーマ編集</a></li>
+<li><a href="../contents/">コンテンツ編集</a></li>
+<li><a href="../publish/">パブリッシュ</a></li>
+<li><a href="../cmd_options/">コマンドラインオプション</a></li>
+<li><a href="../plugins/">プラグイン</a></li>
+<li><a href="../pxcommands/">PXコマンド</a></li>
+<li><a href="../guieditor/">GUI編集</a></li>
+<li><a href="../contents_manifesto/">Contents Manifesto</a></li>
+<li><a href="../api_reference/">API リファレンス</a></li>
+</ul>
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			<div class="container">
+				<div class="theme_backtotop"><a href="#page_top"><i class="fa fa-arrow-up"></i> back to top</a></div>
+				<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../">使い方</a></li><li><span>設定</span></li></ul></div>
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+			<div class="theme_container">
+				<nav class="theme_megafooter_navi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../" class="current">使い方</a></li><li><a href="../../tools/">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>				</nav>
+			</div>
+			<div class="theme_container theme_footer_shouldernavi">
+<ul><li><a href="../../">HOME</a></li><li><a href="../../developers/">開発者向けの情報</a></li></ul>			</div>
+			<div class="theme_container theme_footer_searcher">
+				<form action="../../search/" class="form-inline">
+					<div class="form-group">
+						<label>サイト内検索</label>
+						<input type="text" name="q" value="" class="form-control" />
+						<button class="form-control">検索</button>
+					</div>
+				</form>
+			</div>
+			<div class="theme_container">
+				<div class="theme_social_icons">
+					<a href="https://twitter.com/pxfw" target="_blank" title="Pickles 2 on Twitter"><i class="fa fa-twitter"></i></a>
+					<a href="https://github.com/pickles2" target="_blank" title="Pickles 2 on github"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+			<div class="theme_container">
+				<p style="text-align:center;">&copy;Pickles 2 Project.</p>
+			</div>
+		</footer>
+		<script src="../../caches/p/theme/pickles/scripts/smoothScroll.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/global.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/jquery.sidebarFix.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.theme_common_navi').sidebarFix({
+					'frame': $('.theme_common_navi_frame'),
+					'topBuffer': 98
+				});
+			});
+		</script>
+	</body>
+</html>

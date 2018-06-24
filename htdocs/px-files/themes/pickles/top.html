@@ -1,0 +1,161 @@
+<?php
+	require_once( __DIR__.'/php/top.php' );
+	$theme_top = new pickles2\themes\pickles\theme_top($px, $theme);
+
+	require_once( __DIR__.'/php/custom.php' );
+	$theme_custom = new pickles2\themes\pickles\theme_custom($px, $theme);
+
+	//↓ $page_info にページの情報を格納しています。
+	//	 test::var_dump( $page_info ); で、変数の内容を確認できます。
+	$page_info = $px->site()->get_current_page_info();
+	$colors = $theme_top->get_color_scheme();
+	$test_results = $theme_top->setup_test();
+	$messageBoxSetting = array();
+	$messageBoxSetting['main'] = $colors['main'];
+	$messageBoxSetting['bg'] = '#fff';
+	$messageBoxSetting['radius'] = '1em';
+	if( count($test_results) ){
+		// エラーが検出された場合
+		$messageBoxSetting['main'] = '#ff0000';
+		$messageBoxSetting['bg'] = '#ffeeee';
+		$messageBoxSetting['radius'] = '0px';
+	}
+?><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title><?= htmlspecialchars( $px->conf()->name ) ?></title>
+<?php include(__DIR__.'/inc/headsection.inc'); ?>
+<?= $px->bowl()->pull('head') ?>
+
+		<style type="text/css">
+			header.theme_header{
+				height: 100%;
+			}
+			.theme_welcome{
+				background: #009fe9;
+				text-align: center;
+				padding: 5em 0 4em;
+				color: #fff;
+				height: 100%;
+			}
+			.theme_welcome h1{
+				margin: 0 auto;
+				width: 95%;
+				max-width:480px;
+				font-size: 500%;
+				font-weight: 100;
+				white-space: nowrap;
+			}
+			.theme_welcome p{
+				margin: 1em auto 0;
+				width: 95%;
+				max-width:600px;
+				font-size: 180%;
+				font-weight: 100;
+			}
+			@media all and (max-width:560px){
+				.theme_welcome h1{
+					font-size: 400%;
+				}
+				.theme_welcome p{
+					font-size: 140%;
+				}
+			}
+			@media all and (max-width:450px){
+				.theme_welcome h1{
+					font-size: 300%;
+				}
+				.theme_welcome p{
+					font-size: 110%;
+				}
+			}
+			@media all and (max-width:310px){
+				.theme_welcome h1{
+					font-size: 250%;
+					white-space: pre-wrap;
+					word-break: break-all;
+					word-wrap: break-word;
+				}
+				.theme_welcome p{
+					font-size: 80%;
+					white-space: pre-wrap;
+					word-break: break-all;
+					word-wrap: break-word;
+				}
+				.theme_welcome p br{
+					display:none;
+				}
+			}
+			.theme_welcome .theme_globalnavi{
+				position: absolute;
+				right: 10px;
+				top: 10px;
+			}
+		</style>
+	</head>
+	<body class="top">
+		<header class="theme_header" id="page_top">
+			<div class="theme_welcome">
+				<h1><img src="<?= $theme->files( 'images/logo_2017.svg' ); ?>" alt="Pickles 2" /></h1>
+				<p> 簡単、手軽<br />拡張しやすく、誰にでも扱える<br />ウェブデザインツール</p>
+				<nav class="theme_globalnavi">
+<?php
+	$global_menu = $px->site()->get_global_menu();
+	echo( '<ul>' );
+	foreach( $global_menu as $page_id ){
+		echo( '<li>'.$px->mk_link( $page_id ).'</li>' );
+	}
+	echo( '</ul>' );
+?>
+				</nav>
+			</div><!-- /.theme_welcome -->
+		</header>
+		<div class="theme_mainblock">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="contents" <?= htmlspecialchars($theme->get_attr_bowl_name_by())?>="main">
+<?= $px->bowl()->pull() ?>
+						</div>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			<div class="container">
+				<div class="theme_backtotop"><a href="#page_top"><i class="fa fa-arrow-up"></i> back to top</a></div>
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+			<div class="container">
+				<nav class="theme_megafooter_navi">
+<?php
+	$global_menu = $px->site()->get_global_menu();
+	echo( '<ul>' );
+	foreach( $global_menu as $page_id ){
+		echo( '<li>'.$px->mk_link( $page_id ).'</li>' );
+	}
+	echo( '</ul>' );
+?>
+				</nav>
+			</div>
+			<div class="container theme_footer_shouldernavi">
+<?php
+	$shoulder_menu = $px->site()->get_shoulder_menu();
+	echo( '<ul>' );
+	foreach( $shoulder_menu as $page_id ){
+		echo( '<li>'.$px->mk_link( $page_id ).'</li>' );
+	}
+	echo( '</ul>' );
+?>
+			</div>
+			<div class="container">
+<?php include(__DIR__.'/inc/default_footer_social_icons.inc'); ?>
+			</div>
+			<div class="container">
+				<p style="text-align:center;">&copy;Pickles 2 Project.</p>
+			</div>
+		</footer>
+<?php include(__DIR__.'/inc/footsection.inc'); ?>
+<?= $px->bowl()->pull('foot') ?>
+	</body>
+</html>

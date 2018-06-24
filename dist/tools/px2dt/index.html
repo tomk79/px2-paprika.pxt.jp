@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Pickles 2 (Pickles 2 Desktop Tool) | Pickles 2</title>
+
+<meta property="og:site_name" content="Pickles 2" />
+<meta property="og:title" content="Pickles 2 (Pickles 2 Desktop Tool) | Pickles 2" />
+<meta property="og:type" content="blog" />
+<meta property="og:url" content="http://pickles2.pxt.jp/tools/px2dt/" />
+<meta property="og:image" content="http://pickles2.pxt.jp/common/images/og_image.png" />
+<link rel="canonical" href="http://pickles2.pxt.jp/tools/px2dt/" />
+<link rel="icon" href="../../common/images/favicon.png" type="image/png" />
+<meta name="apple-mobile-web-app-capable" content="no" /><meta name="format-detection" content="telephone=no" /><link rel="apple-touch-icon" href="../../common/images/apple-touch-icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+ 
+<!-- jQuery -->
+<script src="../../common/scripts/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../../common/styles/bootstrap/css/bootstrap.min.css">
+<script src="../../common/styles/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- px2style -->
+<link rel="stylesheet" href="../../common/px2style/dist/styles.css" type="text/css" />
+<script src="../../common/px2style/dist/scripts.js"></script>
+
+<!-- Contents Stylesheets -->
+<link rel="stylesheet" href="../../common/styles/contents.css" type="text/css" />
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3100892-11', 'auto');
+  ga('send', 'pageview');
+</script>
+
+		<!-- Adobe Typekit -->
+		<script src="https://use.typekit.net/erd0xqv.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!-- Bootstrap Theme -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/theme.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/font-awesome-4.6.3/css/font-awesome.min.css" />
+
+		<!-- highlight.js -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/highlight.js/styles/github.css">
+		<script src="../../caches/p/theme/pickles/libs/highlight.js/highlight.pack.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('pre code').each(function(i, block) {
+					hljs.highlightBlock(block);
+				});
+			});
+		</script>
+
+		<script>
+			// Adobe Typekit
+			$(function(){
+				var mutObs = new MutationObserver(function(records, observer){
+					// console.log('MutationObserver() callback');
+					// console.log(records);
+					// console.log(observer);
+
+					for( var idx in records ){
+						var $tgt = $(records[idx].target);
+						// $tgt.find('h1,h2,h3,h4,h5,h6')
+						// 	.removeClass('tk-ryo-gothic-plusn')
+						// 	.removeClass('tk-skolar-sans-latin')
+						// 	.addClass('tk-ryo-gothic-plusn')
+						// ;
+						$tgt.find('.theme_welcome h1').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+						$tgt.find('.theme_welcome p').addClass('tk-ryo-gothic-plusn');
+
+						// $tgt.find('.theme_header').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_footer').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_breadcrumb').addClass('tk-ryo-gothic-plusn');
+						$tgt.find('.theme_si').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+					}
+
+				});
+				mutObs.observe($('body').get(0), {
+					childList: true,
+					subtree: true
+				});
+
+			});
+		</script>
+	</head>
+	<body class="default">
+		<header class="theme_header" id="page_top">
+			<div class="container">
+				<p class="theme_si"><a href="../../"><img src="../../caches/p/theme/pickles/images/logo_2017.svg" alt="Pickles 2" /></a></p>
+				<div class="theme_shouldernavi">
+<ul><li><a href="../../developers/">開発者向けの情報</a></li></ul>				</div>
+				<div class="theme_globalnavi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../../manual/">使い方</a></li><li><a href="../" class="current">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>
+				</div>
+			</div>
+		</header>
+		<div class="theme_mainblock">
+			<div class="container theme_common_navi_frame">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../">ツール・リソース</a></li><li><span>Pickles 2</span></li></ul></div>
+						<h1>Pickles 2 (Pickles 2 Desktop Tool)</h1>
+
+
+						<div class="contents">
+<p>Pickles 2 (旧名称 Pickles 2 Desktop Tool) は、Pickles 2 ウェブプロジェクトをGUIで編集できるようにするデスクトップアプリケーションです。</p>
+<p>コマンドラインやソースコード編集を極力廃し、グラフィカルで直感的な編集環境を提供します。</p>
+
+<!-- == autoindex == -->
+<div style="margin:2em 5%; border:1px solid #bbb; padding:1em; background:rgba(124, 124, 124, 0.05); border-radius:5px;">
+<div style="margin:0; padding:0; text-align:center; font-weight:bold;">INDEX</div><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_DEMO">DEMO</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_ダウンロード">ダウンロード</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_必要なシステム環境">必要なシステム環境</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_インストール手順">インストール手順</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_更新履歴">更新履歴</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_v2.0.0-beta.19_(2018年4月6日)">Pickles 2 v2.0.0-beta.19 (2018年4月6日)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_v2.0.0-beta.18_(2017年12月8日)">Pickles 2 v2.0.0-beta.18 (2017年12月8日)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_v2.0.0-beta.17.1_(2017年6月21日)">Pickles 2 v2.0.0-beta.17.1 (2017年6月21日)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_v2.0.0-beta.17_(2017年6月1日)">Pickles 2 v2.0.0-beta.17 (2017年6月1日)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_Desktop_Tool_2.0.0-beta.16_(2017年3月27日)">Pickles 2 Desktop Tool 2.0.0-beta.16 (2017年3月27日)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_Desktop_Tool_2.0.0-beta.15_(2016年11月21日)">Pickles 2 Desktop Tool 2.0.0-beta.15 (2016年11月21日)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_Desktop_Tool_2.0.0-beta.14_(2016年9月8日)">Pickles 2 Desktop Tool 2.0.0-beta.14 (2016年9月8日)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_Desktop_Tool_2.0.0-beta.13_(2016年8月3日)">Pickles 2 Desktop Tool 2.0.0-beta.13 (2016年8月3日)</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_Pickles_2_Desktop_Tool_2.0.0-beta.12_(2016年6月23日)">Pickles 2 Desktop Tool 2.0.0-beta.12 (2016年6月23日)</a></li></ul>
+</li></ul>
+</div>
+<!-- / == autoindex == -->
+
+
+
+
+<span id="hash_DEMO"></span><h2 id="demo">DEMO</h2>
+<div class="unit">
+    <div class="center">
+        <p class="YoutubeWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/yUnckFu7SNs" frameborder="0" allowfullscreen></iframe></p>
+    </div>
+</div>
+<span id="hash_ダウンロード"></span><h2>ダウンロード</h2>
+
+<p>
+<a href="https://github.com/pickles2/app-pickles2/releases/tag/2.0.0-beta.19" target="_blank">Pickles 2 ダウンロードページ</a> からダウンロードできます。<br />
+</p>
+
+<ul>
+<li><a href="https://github.com/pickles2/app-pickles2/releases/download/2.0.0-beta.19/Pickles2-2.0.0-beta.19-osx64.zip">Pickles2-2.0.0-beta.19-osx64.zip</a></li>
+<li><a href="https://github.com/pickles2/app-pickles2/releases/download/2.0.0-beta.19/Pickles2-2.0.0-beta.19-win32.zip">Pickles2-2.0.0-beta.19-win32.zip</a></li>
+<li><a href="https://github.com/pickles2/app-pickles2/releases/download/2.0.0-beta.19/Pickles2-2.0.0-beta.19-linux64.zip">Pickles2-2.0.0-beta.19-linux64.zip</a></li>
+</ul>
+<span id="hash_必要なシステム環境"></span><h2 id="-">必要なシステム環境</h2>
+<p>Pickles 2 は、内部処理として次のシステムコマンドを使用します。</p>
+<ul>
+<li>Windows または Mac OSX が稼働するPC</li>
+<li><code>php</code>コマンド(PHP 5.4以降)</li>
+<li><code>git</code>コマンド</li>
+</ul>
+<span id="hash_インストール手順"></span><h2 id="-">インストール手順</h2>
+<p><a href="../../manual/setup/">セットアップ手順</a> に説明がありますので、参照してください。</p>
+<span id="hash_更新履歴"></span><h2 id="-">更新履歴</h2>
+<span id="hash_Pickles_2_v2.0.0-beta.19_(2018年4月6日)"></span><h3 id="pickles-2-v2-0-0-beta-19-2018-4-6-">Pickles 2 v2.0.0-beta.19 (2018年4月6日)</h3>
+<ul>
+<li>GUI編集で、 elseifフィールド と elseフィールド を使えるようになった。</li>
+<li>GUI編集で、 moduleフィールド、 loopフィールドに <code>maxLength</code> を追加。</li>
+<li>GUI編集で、 moduleフィールドに <code>enabledChildren</code> を、モジュールの <code>info.json</code> 仕様に <code>enabledParents</code>, <code>enabledBowls</code> を追加。親子関係の定義ができるようになった。</li>
+<li>プロジェクトの診断情報の表示機能を追加。</li>
+<li>外部テキストエディタの設定で、 <code>$PATH</code> を使えるようになった。</li>
+<li>外部Gitクライアントで開く機能を追加。</li>
+<li>前回パブリッシュしたときの条件を記憶し、自動入力されるようになった。</li>
+<li>デフォルトで、内蔵 php ではなくパスが通された <code>php</code> コマンドを使用するように変更。</li>
+<li>スタイルガイドのインターフェイスを改善。</li>
+<li>その他不具合の修正、パフォーマンス調整など。</li>
+</ul>
+<span id="hash_Pickles_2_v2.0.0-beta.18_(2017年12月8日)"></span><h3 id="pickles-2-v2-0-0-beta-18-2017-12-8-">Pickles 2 v2.0.0-beta.18 (2017年12月8日)</h3>
+<ul>
+<li>テーマ編集機能を追加。</li>
+<li>GUI編集で、imageフィールドがファイル名の重複をチェックするようになった。</li>
+<li>GUI編集で、imageフィールドの JPEG, PNG 画像の自動ロスレス圧縮機能を削除。圧縮に著しく時間がかかり、作業効率を下げるため。</li>
+<li>GUI編集で、finalize.js の第3引数 <code>supply</code> に <code>data</code> を追加。モジュールに入力されたデータ構造にアクセスできるようになった。</li>
+<li>モジュール編集機能のUI改善。</li>
+<li>プロジェクトの <code>px2package</code> を読み込み、 <code>entry_script</code>, <code>home_dir</code> を補完するようになった。</li>
+<li>新しい設定 <code>$conf-&gt;plugins-&gt;px2dt-&gt;path_module_templates_dir</code> に対応。</li>
+<li>コンテンツ編集画面が、エイリアスページに対応した。</li>
+<li>起動時のウィンドウサイズが、スクリーンサイズいっぱいに拡大されるようになった。</li>
+<li>パンくずに欠損などがある場合に、コンテンツ編集画面で画面が動かなくなる不具合を修正。</li>
+<li>その他いくつかの細かい修正。</li>
+</ul>
+<span id="hash_Pickles_2_v2.0.0-beta.17.1_(2017年6月21日)"></span><h3 id="pickles-2-v2-0-0-beta-17-1-2017-6-21-">Pickles 2 v2.0.0-beta.17.1 (2017年6月21日)</h3>
+<ul>
+<li>新規プロジェクト作成時に成功しているのにエラーが表示される不具合を修正。</li>
+<li>コンテンツ一括加工の不具合を修正。</li>
+<li>内蔵のプレビュー用サーバーの起動に失敗した場合に、画面に通知を表示するようになった。</li>
+<li>その他いくつかの細かい修正。</li>
+</ul>
+<span id="hash_Pickles_2_v2.0.0-beta.17_(2017年6月1日)"></span><h3 id="pickles-2-v2-0-0-beta-17-2017-6-1-">Pickles 2 v2.0.0-beta.17 (2017年6月1日)</h3>
+<ul>
+<li>アプリケーションの名称を <code>Pickles 2 Desktop Tool</code> から <code>Pickles 2</code> に変更。</li>
+<li>NW.js を 0.21.1 に更新。</li>
+<li>Windows版で、バックグラウンドでの パブリッシュ中 と サイトマップキャッシュ生成中 に、画面左下に状態を表示するようになった。</li>
+<li>旧GUI編集エンジン <code>legacy</code> を廃止し、<code>pickles2-contents-editor</code> に一本化。</li>
+<li>コンテンツ編集画面のUI改善。ページ一覧をツリー表示に変更し、大量のページを扱っても破綻しないようにした。</li>
+<li>「他のページから複製して取り込む」で、入力した文字列から候補のページを表示するようになった。</li>
+<li>プロジェクトごとに外部のプレビューサーバーを設定できるようになった。</li>
+<li>同名で拡張子が異なるサイトマップファイルをまとめて表示するように変更した。</li>
+<li>サイトマップファイルの一覧に、編集中の一時隠しファイルが表示されないように修正した。</li>
+<li>その他いくつかの細かい修正。</li>
+</ul>
+<span id="hash_Pickles_2_Desktop_Tool_2.0.0-beta.16_(2017年3月27日)"></span><h3 id="pickles-2-desktop-tool-2-0-0-beta-16-2017-3-27-">Pickles 2 Desktop Tool 2.0.0-beta.16 (2017年3月27日)</h3>
+<ul>
+<li>コンテンツ編集機能に多言語対応を追加。</li>
+<li>中文の言語コードを修正。</li>
+<li>モジュール編集 機能追加。</li>
+<li>スタイルガイド生成 機能追加。</li>
+<li>コンテンツを一括加工 機能追加。</li>
+<li>GUI編集で、モジュールの <code>info.json</code> や <code>clip.json</code> がキャッシュされ、更新が反映されない場合がある問題を修正。</li>
+<li>GUI編集で、モジュールの package, category にも <code>deprecated</code> フラグを追加。</li>
+<li>GUI編集で、moduleフィールド、 loopフィールド でも <code>hidden</code>, ifフィールドでの分岐, echoフィールドからの出力 ができるようになった。</li>
+<li>GUI編集のimageフィールドに、クリップボード上の画像をペーストできる機能を追加。</li>
+<li>GUI編集で、既に使用されたモジュールに、後から selectフィールドを追加した場合に、 <code>default</code> が適用されない不具合を修正。</li>
+<li>GUI編集で、インスタンスのカット機能を追加。</li>
+<li>GUI編集で、インスタンスの複数選択機能を追加。</li>
+<li>プレビューサーバーが、Pickles 2 のコンテンツルートに設置された <code>.htaccess</code> を簡易的に解析し、 Pickles 2 に渡すべき 拡張子の一覧を取得して制御するようになった。</li>
+<li>コンテンツ編集メニューからページ情報を表示できる機能を追加。</li>
+<li>その他いくつかの細かい修正。</li>
+</ul>
+<span id="hash_Pickles_2_Desktop_Tool_2.0.0-beta.15_(2016年11月21日)"></span><h3 id="pickles-2-desktop-tool-2-0-0-beta-15-2016-11-21-">Pickles 2 Desktop Tool 2.0.0-beta.15 (2016年11月21日)</h3>
+<ul>
+<li>ハンバーガーメニューに「コマンドラインで開く」を追加。</li>
+<li>GUI編集で、プロジェクト固有のカスタムフィールドを追加できる機能 <code>custom_fields</code> を追加。</li>
+<li>GUI編集の <code>pathResourceDir</code> を <code>path_resource_dir</code> に、 <code>realpathDataDir</code> を <code>path_data_dir</code> に変更。</li>
+<li>GUI編集のAPIのいくつかを、 <code>pickles2/px2-px2dthelper</code> 依存に変更。</li>
+<li>GUI編集のtableフィールドで、最後の行が結合されている場合に、列幅指定が欠落する不具合を修正。</li>
+<li>Windows版ビルドの起動にかかる時間を改善した。</li>
+<li>プロジェクトの準備が整っていない場合には、 composerパッケージの更新をチェックしないように修正。</li>
+<li>ページでエラーが検出される場合に、プレビュー画面に表示するようになった。</li>
+<li>バックグラウンドでの パブリッシュ中 と サイトマップキャッシュ生成中 に、画面左下に状態を表示するようになった。 (Only Mac)</li>
+<li>その他いくつかの細かい修正。</li>
+</ul>
+<span id="hash_Pickles_2_Desktop_Tool_2.0.0-beta.14_(2016年9月8日)"></span><h3 id="pickles-2-desktop-tool-2-0-0-beta-14-2016-9-8-">Pickles 2 Desktop Tool 2.0.0-beta.14 (2016年9月8日)</h3>
+<ul>
+<li>パブリッシュのオプション <code>paths_region</code> 、 <code>keep_cache</code> に対応した。</li>
+<li>パブリッシュの条件をパターン登録できるようになった。</li>
+<li>ハンバーガーメニューに「テキストエディタで開く」を追加。</li>
+<li>自然言語を選択できるようになった。 (まだ翻訳は十分ではなく、少しずつ対応していきます)</li>
+<li>GUI編集で登録した JPEG, PNG 画像が、自動的にロスレス圧縮機能されるようになった。</li>
+<li>GUI編集編集のimageフィールドで、ウェブ上のURLを直接参照できる機能を追加。</li>
+<li>GUI編集で、モジュール設定 <code>deprecated</code> を追加。非推奨のモジュールに <code>true</code> をセットすると、モジュールパレットに表示されなくなる。</li>
+<li>GUI編集の <code>pathResourceDir</code> と <code>realpathDataDir</code> を設定できるようになった。</li>
+<li>GUI編集で、モジュールの <code>finalize.js</code> の第3引数に、ライブラリやリソースを供給する <code>supply</code> を追加。この中に含まれる <code>cheerio</code> を利用できるようになった。</li>
+<li>コンテンツ編集画面で 編集モード アイコンを表示するようになった。</li>
+<li>メニューを選択時に、プロジェクトの情報を更新するようになり、コンフィグ更新時 や <code>composer update</code> のあと、ダッシュボードに戻る必要がなくなった。</li>
+<li>Pickles 2 Desktop Tool 設定 で、OK ボタンを押した直後に設定内容が保存されるようになった。</li>
+<li>深いディレクトリにある新規のファイルをgitコミットできない不具合を修正。</li>
+<li>Pickles 2 が深い階層にある場合に、GUI編集でHTMLを正常に更新できない不具合を修正。</li>
+<li>プロジェクトホームにヒントを表示する機能を追加。</li>
+<li>composerパッケージの更新がある場合に通知する機能を追加。</li>
+<li>プレビューサーバーが、アクセスログを出力するようになった。</li>
+<li>プレビューサーバーが、ネットワークからのアクセスを拒否する設定を選択できるようになった。(デフォルトは拒否)</li>
+<li>その他いくつかの細かい修正。</li>
+</ul>
+<span id="hash_Pickles_2_Desktop_Tool_2.0.0-beta.13_(2016年8月3日)"></span><h3 id="pickles-2-desktop-tool-2-0-0-beta-13-2016-8-3-">Pickles 2 Desktop Tool 2.0.0-beta.13 (2016年8月3日)</h3>
+<ul>
+<li>コンテンツやサイトマップのコミット時、gitパスの設定が無視される不具合を修正。</li>
+<li>コンフィグ <code>path_controot</code> が <code>/</code> 以外の場合に起きる複数の不具合を修正。</li>
+<li>pickles2-contents-editor 更新: ローカルリソースの読み込みの記述を、 <code>$px-&gt;path_files()</code> 依存に書き換えた。</li>
+<li>GUI編集 の selectフィールドに、オプション <code>&quot;display&quot;: &quot;radio&quot;</code> を追加。ラジオボタン形式の入力欄を作成できるようになった。</li>
+<li>GUI編集 で、同じ種類のフィールドが1つのモジュールに並んでいる場合に、最後の値がすべてに適用されてしまう不具合を修正。</li>
+<li>GUI編集 で、コピー＆ペースト操作時に、誤った操作ができてしまう不具合を修正。</li>
+<li>GUI編集 で、データ上のエラーで、誤ったモジュールが混入した場合に異常終了しないように修正。</li>
+<li>プレビューサーバーにPHPのパス設定が効いていない不具合を修正。</li>
+<li>ウィンドウサイズを変更したときに、GUIエディタの表示が崩れる不具合を修正。</li>
+<li>その他幾つかの細かい修正。</li>
+</ul>
+<span id="hash_Pickles_2_Desktop_Tool_2.0.0-beta.12_(2016年6月23日)"></span><h3 id="pickles-2-desktop-tool-2-0-0-beta-12-2016-6-23-">Pickles 2 Desktop Tool 2.0.0-beta.12 (2016年6月23日)</h3>
+<ul>
+<li>コンテンツ編集UIを pickles2-contents-editor に差し替えた。(broccoli-html-editorをラップするUIライブラリ)</li>
+<li>コンテンツをコミットする機能を追加。</li>
+<li>コンテンツ別のコミットログを表示する機能を追加。</li>
+<li>コンテンツ別にコミットログからロールバックする機能を追加。</li>
+<li>サイトマップをコミットする機能を追加。</li>
+<li>サイトマップのコミットログを表示する機能を追加。</li>
+<li>サイトマップをコミットログからロールバックする機能を追加。</li>
+<li>editWindow 上で、moduleフィールドとloopフィールドの並べ替えができるようになった。</li>
+<li>editWindow 上の loop appender をダブルクリック操作した後に表示が更新されない問題を修正。</li>
+<li>ソース編集で、CSS と JS が空白なときにも、外部ファイルが作られてしまう問題を修正。</li>
+<li>コンテンツの編集モードをHTMLに変更したいときに、GUI編集モードになってしまう不具合を修正。</li>
+<li>モジュールの詳細ダイアログ上で説明文のコピーに失敗する問題を修正。</li>
+<li>その他の細かい修正とチューニング。</li>
+</ul>
+						</div>
+
+
+
+					</div>
+					<div class="col-sm-3">
+						<nav class="theme_common_navi">
+							<p><a href="../">ツール・リソース</a></p>
+<ul>
+<li><a href="./" class="current">Pickles 2</a></li>
+<li><a href="../asazuke/">Asazuke</a></li>
+</ul>
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			<div class="container">
+				<div class="theme_backtotop"><a href="#page_top"><i class="fa fa-arrow-up"></i> back to top</a></div>
+				<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../">ツール・リソース</a></li><li><span>Pickles 2</span></li></ul></div>
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+			<div class="theme_container">
+				<nav class="theme_megafooter_navi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../../manual/">使い方</a></li><li><a href="../" class="current">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>				</nav>
+			</div>
+			<div class="theme_container theme_footer_shouldernavi">
+<ul><li><a href="../../">HOME</a></li><li><a href="../../developers/">開発者向けの情報</a></li></ul>			</div>
+			<div class="theme_container theme_footer_searcher">
+				<form action="../../search/" class="form-inline">
+					<div class="form-group">
+						<label>サイト内検索</label>
+						<input type="text" name="q" value="" class="form-control" />
+						<button class="form-control">検索</button>
+					</div>
+				</form>
+			</div>
+			<div class="theme_container">
+				<div class="theme_social_icons">
+					<a href="https://twitter.com/pxfw" target="_blank" title="Pickles 2 on Twitter"><i class="fa fa-twitter"></i></a>
+					<a href="https://github.com/pickles2" target="_blank" title="Pickles 2 on github"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+			<div class="theme_container">
+				<p style="text-align:center;">&copy;Pickles 2 Project.</p>
+			</div>
+		</footer>
+		<script src="../../caches/p/theme/pickles/scripts/smoothScroll.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/global.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/jquery.sidebarFix.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.theme_common_navi').sidebarFix({
+					'frame': $('.theme_common_navi_frame'),
+					'topBuffer': 98
+				});
+			});
+		</script>
+	</body>
+</html>

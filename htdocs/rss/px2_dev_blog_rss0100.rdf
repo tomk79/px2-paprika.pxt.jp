@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel rdf:about="http://pickles2.pxt.jp/">
+		<title>Pickles 2 Developers BLOG</title>
+		<link>http://pickles2.pxt.jp/blog/</link>
+		<description>Pickles 2 プロジェクトの開発者によるブログです。</description>
+		<items>
+			<rdf:Seq>
+				<rdf:li rdf:resource="http://pickles2.pxt.jp/blog/articles/2018/04/24_get_start_pickles2_released/?rss=1" />
+				<rdf:li rdf:resource="http://pickles2.pxt.jp/blog/articles/2018/04/06_pickles2_released/?rss=1" />
+				<rdf:li rdf:resource="http://pickles2.pxt.jp/blog/articles/2018/02/28_pxfw_supports_php_7_2/?rss=1" />
+				<rdf:li rdf:resource="http://pickles2.pxt.jp/blog/articles/2018/01/24_pxfw_plugin_released/?rss=1" />
+				<rdf:li rdf:resource="http://pickles2.pxt.jp/blog/articles/2017/12/08_pickles2_released/?rss=1" />
+				<rdf:li rdf:resource="http://pickles2.pxt.jp/blog/articles/2017/06/21_pickles2_released/?rss=1" />
+				<rdf:li rdf:resource="http://pickles2.pxt.jp/blog/articles/2017/06/01_pickles2_released/?rss=1" />
+			</rdf:Seq>
+		</items>
+	</channel>
+		<item rdf:about="http://pickles2.pxt.jp/blog/articles/2018/04/24_get_start_pickles2_released/?rss=1">
+			<title>[リリース情報] Get start &quot;Pickles 2&quot; ! v2.0.11 をリリースしました。</title>
+			<link>http://pickles2.pxt.jp/blog/articles/2018/04/24_get_start_pickles2_released/?rss=1</link>
+			<description><![CDATA[2018年4月24日、 Pickles 2 の入門用プロジェクトの雛形である Get start &quot;Pickles 2&quot; ! の最新版 バージョン 2.0.11 がリリースされました。
+
+ドラッグ・アンド・ドロップの操作で編集できるテーマのサンプルが追加された他、一部初期設定値の見直しが行われ、よりシンプルに、直感的に扱えるようになりました。]]></description>
+			<dc:date>2018-04-24T00:00:00+09:00</dc:date>
+		</item>
+		<item rdf:about="http://pickles2.pxt.jp/blog/articles/2018/04/06_pickles2_released/?rss=1">
+			<title>[リリース情報] Pickles 2 v2.0.0-beta.19 をリリースしました。</title>
+			<link>http://pickles2.pxt.jp/blog/articles/2018/04/06_pickles2_released/?rss=1</link>
+			<description><![CDATA[2018年4月6日、 Pickles 2 アプリケーション バージョン 2.0.0-beta.19 がリリースされました。
+
+GUI編集のモジュール定義の仕様が拡張されたほか、より使いやすく、より安定して使えるようになりました。]]></description>
+			<dc:date>2018-04-06T00:00:00+09:00</dc:date>
+		</item>
+		<item rdf:about="http://pickles2.pxt.jp/blog/articles/2018/02/28_pxfw_supports_php_7_2/?rss=1">
+			<title>[リリース情報] Pickles Framework が PHP 7.2 で動作しない問題が修正されました。</title>
+			<link>http://pickles2.pxt.jp/blog/articles/2018/02/28_pxfw_supports_php_7_2/?rss=1</link>
+			<description><![CDATA[2018年2月28日、 Pickles Framework と プラグイン 1件 がリリースされました。この更新により、 PHP 7.2系 で起きていた不具合が解決されます。]]></description>
+			<dc:date>2018-02-28T00:00:00+09:00</dc:date>
+		</item>
+		<item rdf:about="http://pickles2.pxt.jp/blog/articles/2018/01/24_pxfw_plugin_released/?rss=1">
+			<title>[リリース情報] Pickles Framework と プラグイン 2件 をリリースしました。</title>
+			<link>http://pickles2.pxt.jp/blog/articles/2018/01/24_pxfw_plugin_released/?rss=1</link>
+			<description><![CDATA[2018年1月24日、 Pickles Framework と プラグイン 2件 がリリースされました。]]></description>
+			<dc:date>2018-01-24T00:00:00+09:00</dc:date>
+		</item>
+		<item rdf:about="http://pickles2.pxt.jp/blog/articles/2017/12/08_pickles2_released/?rss=1">
+			<title>[リリース情報] Pickles 2 v2.0.0-beta.18 をリリースしました。</title>
+			<link>http://pickles2.pxt.jp/blog/articles/2017/12/08_pickles2_released/?rss=1</link>
+			<description><![CDATA[2017年12月8日、 Pickles 2 アプリケーション バージョン 2.0.0-beta.18 がリリースされました。
+
+このリリースでは、 新しくテーマの編集UIが追加され、モジュール編集機能のUIが改善された他、px2package 情報の読み込みに対応しました。 その他、複数の不具合の修正とパフォーマンス改善が含まれています。]]></description>
+			<dc:date>2017-12-08T00:00:00+09:00</dc:date>
+		</item>
+		<item rdf:about="http://pickles2.pxt.jp/blog/articles/2017/06/21_pickles2_released/?rss=1">
+			<title>[リリース情報] Pickles 2 v2.0.0-beta.17.1 をリリースしました。</title>
+			<link>http://pickles2.pxt.jp/blog/articles/2017/06/21_pickles2_released/?rss=1</link>
+			<description><![CDATA[2017年6月21日、 Pickles 2 アプリケーション バージョン 2.0.0-beta.17.1 がリリースされました。
+
+このリリースは、幾つかの不具合の修正と、軽微なUIの改善を含むメンテナンスリリースです。]]></description>
+			<dc:date>2017-06-21T00:00:00+09:00</dc:date>
+		</item>
+		<item rdf:about="http://pickles2.pxt.jp/blog/articles/2017/06/01_pickles2_released/?rss=1">
+			<title>[リリース情報] Pickles 2 Desktop Tool 改め Pickles 2 バージョン2.0.0-beta.17 をリリースしました。</title>
+			<link>http://pickles2.pxt.jp/blog/articles/2017/06/01_pickles2_released/?rss=1</link>
+			<description><![CDATA[2017年6月1日、 Pickles 2 アプリケーション バージョン 2.0.0-beta.17 がリリースされました。
+
+このバージョンから、 Pickles 2 Desktop Tool は Pickles 2 と名称が変更され、内部の NW.js エンジンが 0.21.1 にバージョンアップされたほか、一部UIの見直し等の変更が含まれています。]]></description>
+			<dc:date>2017-06-01T00:00:00+09:00</dc:date>
+		</item>
+</rdf:RDF>

@@ -1,0 +1,24 @@
+{
+  "name": "px2-paprika.pxt.jp.localhost",
+  "version": "1.0.0",
+  "description": "Paprika Framework Official Website",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "submodules-update": "rm -rfv node_modules/px2style; npm install; gulp;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://tomk79@bitbucket.org/tomk79/px2-paprika.pxt.jp.git"
+  },
+  "author": "Tomoya Koyanagi",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/tomk79/px2-paprika.pxt.jp#readme",
+  "dependencies": {
+    "px2style": "file:submodules/px2style"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

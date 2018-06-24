@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>CIバッジ | Pickles 2</title>
+
+<meta property="og:site_name" content="Pickles 2" />
+<meta property="og:title" content="CIバッジ | Pickles 2" />
+<meta property="og:type" content="blog" />
+<meta property="og:url" content="http://pickles2.pxt.jp/etc/ci_list/" />
+<meta property="og:image" content="http://pickles2.pxt.jp/common/images/og_image.png" />
+<link rel="canonical" href="http://pickles2.pxt.jp/etc/ci_list/" />
+<link rel="icon" href="../../common/images/favicon.png" type="image/png" />
+<meta name="apple-mobile-web-app-capable" content="no" /><meta name="format-detection" content="telephone=no" /><link rel="apple-touch-icon" href="../../common/images/apple-touch-icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+ 
+<!-- jQuery -->
+<script src="../../common/scripts/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="../../common/styles/bootstrap/css/bootstrap.min.css">
+<script src="../../common/styles/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- px2style -->
+<link rel="stylesheet" href="../../common/px2style/dist/styles.css" type="text/css" />
+<script src="../../common/px2style/dist/scripts.js"></script>
+
+<!-- Contents Stylesheets -->
+<link rel="stylesheet" href="../../common/styles/contents.css" type="text/css" />
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-3100892-11', 'auto');
+  ga('send', 'pageview');
+</script>
+
+		<!-- Adobe Typekit -->
+		<script src="https://use.typekit.net/erd0xqv.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+		<!-- Bootstrap Theme -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/styles/theme.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/font-awesome-4.6.3/css/font-awesome.min.css" />
+
+		<!-- highlight.js -->
+		<link rel="stylesheet" href="../../caches/p/theme/pickles/libs/highlight.js/styles/github.css">
+		<script src="../../caches/p/theme/pickles/libs/highlight.js/highlight.pack.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('pre code').each(function(i, block) {
+					hljs.highlightBlock(block);
+				});
+			});
+		</script>
+
+		<script>
+			// Adobe Typekit
+			$(function(){
+				var mutObs = new MutationObserver(function(records, observer){
+					// console.log('MutationObserver() callback');
+					// console.log(records);
+					// console.log(observer);
+
+					for( var idx in records ){
+						var $tgt = $(records[idx].target);
+						// $tgt.find('h1,h2,h3,h4,h5,h6')
+						// 	.removeClass('tk-ryo-gothic-plusn')
+						// 	.removeClass('tk-skolar-sans-latin')
+						// 	.addClass('tk-ryo-gothic-plusn')
+						// ;
+						$tgt.find('.theme_welcome h1').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+						$tgt.find('.theme_welcome p').addClass('tk-ryo-gothic-plusn');
+
+						// $tgt.find('.theme_header').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_footer').addClass('tk-ryo-gothic-plusn');
+						// $tgt.find('.theme_breadcrumb').addClass('tk-ryo-gothic-plusn');
+						$tgt.find('.theme_si').removeClass('tk-ryo-gothic-plusn').addClass('tk-skolar-sans-latin');
+					}
+
+				});
+				mutObs.observe($('body').get(0), {
+					childList: true,
+					subtree: true
+				});
+
+			});
+		</script>
+	</head>
+	<body class="default">
+		<header class="theme_header" id="page_top">
+			<div class="container">
+				<p class="theme_si"><a href="../../"><img src="../../caches/p/theme/pickles/images/logo_2017.svg" alt="Pickles 2" /></a></p>
+				<div class="theme_shouldernavi">
+<ul><li><a href="../../developers/" class="current">開発者向けの情報</a></li></ul>				</div>
+				<div class="theme_globalnavi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../../manual/">使い方</a></li><li><a href="../../tools/">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>
+				</div>
+			</div>
+		</header>
+		<div class="theme_mainblock">
+			<div class="container theme_common_navi_frame">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../../developers/">開発者向けの情報</a></li><li><span>CIバッジ</span></li></ul></div>
+						<h1>CIバッジ</h1>
+
+
+						<div class="contents">
+<p>Pickles 2 関連パッケージのCIツールステータス表示の一覧です。</p>
+
+<!-- == autoindex == -->
+<div style="margin:2em 5%; border:1px solid #bbb; padding:1em; background:rgba(124, 124, 124, 0.05); border-radius:5px;">
+<div style="margin:0; padding:0; text-align:center; font-weight:bold;">INDEX</div><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_PHP,_Composer">PHP, Composer</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_pickles2/px-fw-2.x">pickles2/px-fw-2.x</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_pickles2/px2-px2dthelper">pickles2/px2-px2dthelper</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_pickles2/px2-path-resolver">pickles2/px2-path-resolver</a></li>
+<li style="list-style-type:disc; display:list-item;"><a href="#hash_pickles2/px2-sitemapexcel">pickles2/px2-sitemapexcel</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_NodeJS,_npm">NodeJS, npm</a><ul style="margin:0; padding:0 0 0 2em;"><li style="list-style-type:disc; display:list-item;"><a href="#hash_px2agent">px2agent</a></li></ul></li><li style="list-style-type:disc; display:list-item;"><a href="#hash_その他">その他</a></li></ul>
+</div>
+<!-- / == autoindex == -->
+
+
+<span id="hash_PHP,_Composer"></span><h2>PHP, Composer</h2>
+
+<span id="hash_pickles2/px-fw-2.x"></span><h3><a href="https://github.com/pickles2/px-fw-2.x" target="_blank">pickles2/px-fw-2.x</a></h3>
+
+<table class="def">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Linux</th>
+      <th>Windows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>master</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/px-fw-2.x"><img src="https://secure.travis-ci.org/pickles2/px-fw-2.x.svg?branch=master"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/px-fw-2-x"><img src="https://ci.appveyor.com/api/projects/status/bq8v3bgfrhbvr6rv/branch/master?svg=true"></a>
+      </td>
+    </tr>
+    <tr>
+      <th>develop</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/px-fw-2.x"><img src="https://secure.travis-ci.org/pickles2/px-fw-2.x.svg?branch=develop"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/px-fw-2-x"><img src="https://ci.appveyor.com/api/projects/status/bq8v3bgfrhbvr6rv/branch/develop?svg=true"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<span id="hash_pickles2/px2-px2dthelper"></span><h3><a href="https://github.com/pickles2/px2-px2dthelper" target="_blank">pickles2/px2-px2dthelper</a></h3>
+
+<table class="def">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Linux</th>
+      <th>Windows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>master</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/px2-px2dthelper"><img src="https://secure.travis-ci.org/pickles2/px2-px2dthelper.svg?branch=master"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/px2-px2dthelper"><img src="https://ci.appveyor.com/api/projects/status/70winlbbg8sway58/branch/master?svg=true"></a>
+      </td>
+    </tr>
+    <tr>
+      <th>develop</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/px2-px2dthelper"><img src="https://secure.travis-ci.org/pickles2/px2-px2dthelper.svg?branch=develop"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/px2-px2dthelper"><img src="https://ci.appveyor.com/api/projects/status/70winlbbg8sway58/branch/develop?svg=true"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<span id="hash_pickles2/px2-path-resolver"></span><h3><a href="https://github.com/pickles2/px2-path-resolver" target="_blank">pickles2/px2-path-resolver</a></h3>
+
+<table class="def">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Linux</th>
+      <th>Windows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>master</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/px2-path-resolver"><img src="https://secure.travis-ci.org/pickles2/px2-path-resolver.svg?branch=master"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/px2-path-resolver"><img src="https://ci.appveyor.com/api/projects/status/9u7o6tf510e8r7e0/branch/master?svg=true"></a>
+      </td>
+    </tr>
+    <tr>
+      <th>develop</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/px2-path-resolver"><img src="https://secure.travis-ci.org/pickles2/px2-path-resolver.svg?branch=develop"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/px2-path-resolver"><img src="https://ci.appveyor.com/api/projects/status/9u7o6tf510e8r7e0/branch/develop?svg=true"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<span id="hash_pickles2/px2-sitemapexcel"></span><h3><a href="https://github.com/pickles2/px2-sitemapexcel" target="_blank">pickles2/px2-sitemapexcel</a></h3>
+
+<table class="def">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Linux</th>
+      <th>Windows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>master</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/px2-sitemapexcel"><img src="https://secure.travis-ci.org/pickles2/px2-sitemapexcel.svg?branch=master"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/px2-sitemapexcel"><img src="https://ci.appveyor.com/api/projects/status/epre91g8iqfjni08/branch/master?svg=true"></a>
+      </td>
+    </tr>
+    <tr>
+      <th>develop</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/px2-sitemapexcel"><img src="https://secure.travis-ci.org/pickles2/px2-sitemapexcel.svg?branch=develop"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/px2-sitemapexcel"><img src="https://ci.appveyor.com/api/projects/status/epre91g8iqfjni08/branch/develop?svg=true"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<span id="hash_NodeJS,_npm"></span><h2>NodeJS, npm</h2>
+
+<span id="hash_px2agent"></span><h3><a href="https://github.com/pickles2/node-px2agent" target="_blank">px2agent</a></h3>
+
+<table class="def">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Linux</th>
+      <th>Windows</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>master</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/node-px2agent"><img src="https://secure.travis-ci.org/pickles2/node-px2agent.svg?branch=master"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/node-px2agent"><img src="https://ci.appveyor.com/api/projects/status/jd0dcl2ya2t2nrsa/branch/master?svg=true"></a>
+      </td>
+    </tr>
+    <tr>
+      <th>develop</th>
+      <td align="center">
+        <a href="https://travis-ci.org/pickles2/node-px2agent"><img src="https://secure.travis-ci.org/pickles2/node-px2agent.svg?branch=develop"></a>
+      </td>
+      <td align="center">
+        <a href="https://ci.appveyor.com/project/tomk79/node-px2agent"><img src="https://ci.appveyor.com/api/projects/status/jd0dcl2ya2t2nrsa/branch/develop?svg=true"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<span id="hash_その他"></span><h2>その他</h2>
+
+<table class="def">
+<thead>
+<tr>
+<th rowspan="2">package name</th>
+<th colspan="2">Linux</th>
+<th colspan="2">Windows</th>
+</tr>
+<tr>
+<th>master</th>
+<th>develop</th>
+<th>master</th>
+<th>develop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th><a href="https://github.com/tomk79/filesystem" target="_blank">tomk79/filesystem</a></th>
+<td><a href="https://travis-ci.org/tomk79/filesystem"><img src="https://secure.travis-ci.org/tomk79/filesystem.svg?branch=master"></a></td>
+<td><a href="https://travis-ci.org/tomk79/filesystem"><img src="https://secure.travis-ci.org/tomk79/filesystem.svg?branch=develop"></a></td>
+<td><a href="https://ci.appveyor.com/project/tomk79/filesystem"><img src="https://ci.appveyor.com/api/projects/status/n8r19nmfvqs5ndr8/branch/master?svg=true"></a></td>
+<td><a href="https://ci.appveyor.com/project/tomk79/filesystem"><img src="https://ci.appveyor.com/api/projects/status/n8r19nmfvqs5ndr8/branch/develop?svg=true"></a></td>
+</tr>
+<tr>
+<th><a href="https://github.com/tomk79/php-excel2html" target="_blank">tomk79/php-excel2html</a></th>
+<td><a href="https://travis-ci.org/tomk79/php-excel2html"><img src="https://secure.travis-ci.org/tomk79/php-excel2html.svg?branch=master"></a></td>
+<td><a href="https://travis-ci.org/tomk79/php-excel2html"><img src="https://secure.travis-ci.org/tomk79/php-excel2html.svg?branch=develop"></a></td>
+<td><a href="https://ci.appveyor.com/project/tomk79/php-excel2html"><img src="https://ci.appveyor.com/api/projects/status/o2d8bo08weasyvlh/branch/master?svg=true"></a></td>
+<td><a href="https://ci.appveyor.com/project/tomk79/php-excel2html"><img src="https://ci.appveyor.com/api/projects/status/o2d8bo08weasyvlh/branch/develop?svg=true"></a></td>
+</tr>
+</tbody>
+</table>
+						</div>
+
+
+
+					</div>
+					<div class="col-sm-3">
+						<nav class="theme_common_navi">
+							<p><a href="../../developers/">開発者向けの情報</a></p>
+<ul>
+<li><a href="./" class="current">CIバッジ</a></li>
+</ul>
+						</nav>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+			<div class="container">
+				<div class="theme_backtotop"><a href="#page_top"><i class="fa fa-arrow-up"></i> back to top</a></div>
+				<div class="theme_breadcrumb"><ul><li><a href="../../">HOME</a></li><li><a href="../../developers/">開発者向けの情報</a></li><li><span>CIバッジ</span></li></ul></div>
+			</div><!-- /.container -->
+		</div><!-- /.theme_mainblock -->
+		<footer class="theme_footer">
+			<div class="theme_container">
+				<nav class="theme_megafooter_navi">
+<ul><li><a href="../../overview/about/">はじめに</a></li><li><a href="../../download/">ダウンロード</a></li><li><a href="../../manual/">使い方</a></li><li><a href="../../tools/">ツール・リソース</a></li><li><a href="../../blog/">BLOG</a></li><li><a href="../../usergroups/">ユーザーグループ</a></li></ul>				</nav>
+			</div>
+			<div class="theme_container theme_footer_shouldernavi">
+<ul><li><a href="../../">HOME</a></li><li><a href="../../developers/" class="current">開発者向けの情報</a></li></ul>			</div>
+			<div class="theme_container theme_footer_searcher">
+				<form action="../../search/" class="form-inline">
+					<div class="form-group">
+						<label>サイト内検索</label>
+						<input type="text" name="q" value="" class="form-control" />
+						<button class="form-control">検索</button>
+					</div>
+				</form>
+			</div>
+			<div class="theme_container">
+				<div class="theme_social_icons">
+					<a href="https://twitter.com/pxfw" target="_blank" title="Pickles 2 on Twitter"><i class="fa fa-twitter"></i></a>
+					<a href="https://github.com/pickles2" target="_blank" title="Pickles 2 on github"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+			<div class="theme_container">
+				<p style="text-align:center;">&copy;Pickles 2 Project.</p>
+			</div>
+		</footer>
+		<script src="../../caches/p/theme/pickles/scripts/smoothScroll.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/global.js"></script>
+		<script src="../../caches/p/theme/pickles/scripts/jquery.sidebarFix.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.theme_common_navi').sidebarFix({
+					'frame': $('.theme_common_navi_frame'),
+					'topBuffer': 98
+				});
+			});
+		</script>
+	</body>
+</html>

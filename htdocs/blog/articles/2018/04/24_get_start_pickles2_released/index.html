@@ -1,0 +1,63 @@
+<p>2018年4月24日、 Pickles 2 の入門用プロジェクトの雛形である Get start &quot;Pickles 2&quot; ! の最新版 バージョン 2.0.11 がリリースされました。</p>
+<p>ドラッグ・アンド・ドロップの操作で編集できるテーマのサンプルが追加された他、一部初期設定値の見直しが行われ、よりシンプルに、直感的に扱えるようになりました。</p>
+
+<!-- autoindex -->
+
+
+
+<h2 id="-">このリリースの更新差分</h2>
+<p>このバージョンの主な変更点は下記の通りです。</p>
+<ul>
+<li>GUI編集モード対応のサンプルテーマを追加</li>
+<li>px2-sitemapexcel の変換方向を xlsx -&gt; csv のみになる設定を追加</li>
+<li>プロジェクトにバンドルされていた Bootstrap、 normalize.css を削除。</li>
+<li>テーマにバンドルされていた Bootstrap を削除。</li>
+</ul>
+<div class="unit float_media">
+  <div class="float_media-r1of3">
+    <div class="float_media-image"><img src="./index_files/resources/guieditor_for_theme.png" alt="テーマのGUI編集画面イメージ" /></div>
+    <p class="float_media-caption"><p>テーマのGUI編集画面イメージ</p>
+</p>
+  </div>
+  <div class="float_media-body">
+    <h3 id="gui-">GUI編集モード対応のサンプルテーマを追加</h3>
+<p>このバージョンから、 Pickles 2 のデスクトップアプリケーションで テーマをドラッグ・アンド・ドロップ編集できるサンプルを追加しました。</p>
+<p>テーマ編集用に用意された特別なモジュールを組み合わせて、ヘッダーやフッター、パンくず、ナビゲーションなどのレイアウトを編集できます。</p>
+  </div>
+</div><!-- /.float_media -->
+<h3 id="px2-sitemapexcel-xlsx-csv-">px2-sitemapexcel の変換方向を xlsx -&gt; csv のみになる設定を追加</h3>
+<p>これまでのサイトマップは、 CSV と xlsx のタイムスタンプを比較し、新しい方の内容をもとに古い方のファイルを上書きする仕様でした。</p>
+<p>この振る舞いは、 Git 等のバージョン管理システムと組み合わせた場合などに、タイムスタンプが更新され、しばしば意図しない方向への変換が起きる現象の原因となってきました。</p>
+<p>今回のリリースでは、この変換方向を、タイムスタンプに拠らず xlsx から CSV への一方向が保証される設定に変更しています。</p>
+<p>この設定は、 <code>config.php</code> の181行目付近に書かれています。</p>
+<pre><code>// sitemapExcel
+&#39;tomk79\pickles2\sitemap_excel\pickles_sitemap_excel::exec(&#39;.json_encode(array(
+    // `master_format`
+    // マスターにするファイルフォーマットを指定します。
+    //   - `timestamp` = タイムスタンプが新しい方をマスターにする(デフォルト)
+    //   - `xlsx` = XLSXをマスターにする
+    //   - `csv` = CSVをマスターにする
+    //   - `pass` = 変換しない
+    // のいずれかを指定します。
+    &#39;master_format&#39;=&gt;&#39;xlsx&#39;,
+
+    // `files_master_format`
+    // ファイル名ごとにマスターにするファイルフォーマットを指定します。
+    // ここに設定されていないファイルは、 `master_format` の設定に従います。
+    &#39;files_master_format&#39;=&gt;array(
+        // &#39;timestamp_sitemap&#39;=&gt;&#39;timestamp&#39;,
+        // &#39;csv_master_sitemap&#39;=&gt;&#39;csv&#39;,
+        // &#39;xlsx_master_sitemap&#39;=&gt;&#39;xlsx&#39;,
+        // &#39;no_convert&#39;=&gt;&#39;pass&#39;,
+    ),
+)).&#39;)&#39; ,
+</code></pre><p>既存のプロジェクトに同じ設定を反映するには、この記述を参考に <code>&#39;master_format&#39;=&gt;&#39;xlsx&#39;</code> の設定を追加してください。</p>
+<h3 id="bootstrap-normalize-css-">Bootstrap、 normalize.css を削除</h3>
+<p>これまでのバージョンで含まれていた、 Bootstrap や normalize.css などのフロントエンドのフレームワークが削除されました。</p>
+<p>フロントエンドフレームワークは、本来 プロジェクト個別に、またはモジュール、テーマによって自由に選択されるべきものです。
+ところが、オリジナルのコードにこれらが含まれていることで、 Bootstrap や normalize.css に依存することが前提であるという誤解を与えるリスクを懸念し、削除しました。</p>
+<p>そのぶん、スタート時点のコード量が減り、シンプルに始められるようになったと思います。</p>
+<p>Pickles 2 が Bootstrap や normalize.css を否定する意図ではありません。 プロジェクト固有の自由な方針に従って、必要なフレームワークを選択し導入してください。</p>
+<h2 id="-">導入手順</h2>
+<p><a href="http://pickles2.pxt.jp/manual/setup/projects.html">プロジェクトのセットアップ</a> のページを参照してください。 2018年4月24日 以降に作成したプロジェクトでは、自動的に最新版である 2.0.11 が適用されます。</p>
+<p>それ以前にセットアップしたプロジェクトには適用されません。個別の変更差分を参考に、プロジェクトのコードを修正してください。</p>

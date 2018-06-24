@@ -1,0 +1,48 @@
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "2018年4月6日、 Pickles 2 アプリケーション バージョン 2.0.0-beta.19 がリリースされました。\n\nGUI編集のモジュール定義の仕様が拡張されたほか、より使いやすく、より安定して使えるようになりました。",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "FESS:parts_links/anchor_links",
+      "fields": {}
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## このリリースの更新差分\r\n\r\nこのバージョンの主な変更点は下記の通りです。\r\n\r\n- GUI編集で、 elseifフィールド と elseフィールド を使えるようになった。\r\n- GUI編集で、 moduleフィールド、 loopフィールドに `maxLength` を追加。\r\n- GUI編集で、 moduleフィールドに `enabledChildren` を、モジュールの `info.json` 仕様に `enabledParents`, `enabledBowls` を追加。親子関係の定義ができるようになった。\r\n- プロジェクトの診断情報の表示機能を追加。\r\n- 外部テキストエディタの設定で、 `$PATH` を使えるようになった。\r\n- 外部Gitクライアントで開く機能を追加。\r\n- 前回パブリッシュしたときの条件を記憶し、自動入力されるようになった。\r\n- デフォルトで、内蔵 php ではなくパスが通された `php` コマンドを使用するように変更。\r\n- スタイルガイドのインターフェイスを改善。\r\n- その他不具合の修正、パフォーマンス調整など。\r\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## インストール手順\r\n\r\n[セットアップ手順 > アプリケーションのインストール](/manual/setup/apps.html) を参照してください。\r\n\r\n注意： バージョン 2.0.0-beta.17 以降、 アプリケーションの名称が Pickles 2 Desktop Tool から Pickles 2 に変更されたことに伴い、アプリケーションの実行ファイル名も `Pickles2DesktopTool.app` から `Pickles2.app`  に (Windowsでは `.app` ではなく `.exe`) 変更されています。\r\n\r\n2.0.0-beta.16 以前のバージョンをご利用の場合、古いバージョンのアプリケーションは削除し、 新しいバージョンのファイルと置き換えてください。\r\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     }
+    ]
+   }
+  }
+ }
+}

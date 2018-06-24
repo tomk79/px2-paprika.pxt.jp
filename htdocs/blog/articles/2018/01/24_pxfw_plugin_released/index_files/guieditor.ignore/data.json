@@ -1,0 +1,81 @@
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "2018年1月24日、 Pickles Framework と プラグイン 2件 がリリースされました。\n\n`composer update` を実行して、更新することをおすすめします。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "FESS:parts_links/anchor_links",
+      "fields": {}
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## フレームワーク",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "### pickles2/px-fw-2.x 2.0.35\n\n- `$px->canonical()` を追加。\n- `PX=api.get.canonical` を追加。\n- `$px->mk_link()` に、 `canonical` オプションを追加。\n- `$conf->path_files` に、コールバックを設定できるようになった。\n- サイトマップ項目のうち、`id`, `path`, `content`, `logical_path`, `list_flg`, `layout`, `orderby`, `category_top_flg`, `role`, `proc_type` の前後の空白文字列を自動的に削除して扱うようになった。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## プラグイン",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "### pickles2/px2-multitheme 2.0.5\n\n- 新しい設定項目 `$param_layout_switch` を追加。 GETパラメータで一時的にレイアウトを切り替えて表示できるようになった。\n- `./theme_files/〜〜` という記述でテーマリソースにアクセスできるようになった。 `$theme->files()` が暗黙的に呼ばれ、置き換えられる。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "### pickles2/px2-path-resolver 2.0.8\n\n- `resolve_common_contents()` が、 `path` または `content` が未定義のページでエラーを起こす不具合を修正。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     }
+    ]
+   }
+  }
+ }
+}

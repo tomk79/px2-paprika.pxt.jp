@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+
+html, body{
+	font-size: medium;
+	font-family: Meiryo, "Hiragino Kaku Gothic ProN", Verdana, sans-serif;
+}
+.current{
+	font-weight: bold;
+}
+<?php include(__DIR__.'/normalize/normalize-3.0.1.css'); ?>
+<?php
+// include(__DIR__.'/fess/fess-1.2.0.css');
+?>
+.contents{
+<?php
+print (new \tomk79\pickles2\px2dthelper\main($px))->document_modules()->build_css();
+?>
+
+	/* ライブラリ同士の衝突吸収 */
+	p, ul, ol, dl{
+		margin: 1em 0;
+	}
+	dl dd {
+		margin-left: 2em;
+	}
+	p, li, dt, dd{
+		line-height: 1.6;
+	}
+	.btn{
+		background-color:#428bca;
+	}
+	strong, em{
+		font-weight: bold;
+		color: inherit;
+	}
+
+	// Bootstrap
+	.alert{
+		p{
+			margin: 0;
+		}
+	}
+}
+
+.YoutubeWrapper{
+	position:relative;margin-top:1.2em;margin-bottom:1.2em;padding-top:69px;padding-bottom:50%;overflow:hidden;
+	iframe{
+		position:absolute;top:0;left:0;height:100%;width:100%;
+	}
+}

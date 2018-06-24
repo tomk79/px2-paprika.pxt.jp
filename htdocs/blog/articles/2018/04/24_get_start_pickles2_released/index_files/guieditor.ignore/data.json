@@ -1,0 +1,104 @@
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "2018年4月24日、 Pickles 2 の入門用プロジェクトの雛形である Get start \"Pickles 2\" ! の最新版 バージョン 2.0.11 がリリースされました。\r\rドラッグ・アンド・ドロップの操作で編集できるテーマのサンプルが追加された他、一部初期設定値の見直しが行われ、よりシンプルに、直感的に扱えるようになりました。\r",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "FESS:parts_links/anchor_links",
+      "fields": {}
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## このリリースの更新差分\r\n\r\nこのバージョンの主な変更点は下記の通りです。\r\n\r\n- GUI編集モード対応のサンプルテーマを追加\r\n- px2-sitemapexcel の変換方向を xlsx -> csv のみになる設定を追加\r\n- プロジェクトにバンドルされていた Bootstrap、 normalize.css を削除。\r\n- テーマにバンドルされていた Bootstrap を削除。\r\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "FESS:units/float_media",
+      "fields": {
+       "LR": "r",
+       "ImageSize": "1of3",
+       "thumb": {
+        "resKey": "70fccc0edd87148b890050f0dd14e81c",
+        "path": "./index_files/resources/guieditor_for_theme.png",
+        "resType": "",
+        "webUrl": ""
+       },
+       "alt": "テーマのGUI編集画面イメージ",
+       "caption": {
+        "src": "テーマのGUI編集画面イメージ",
+        "editor": "markdown"
+       },
+       "body_rect": "",
+       "main": [
+        {
+         "modId": "PlainHTMLElements:PlainHTML/MultiText",
+         "fields": {
+          "main": {
+           "src": "### GUI編集モード対応のサンプルテーマを追加\n\nこのバージョンから、 Pickles 2 のデスクトップアプリケーションで テーマをドラッグ・アンド・ドロップ編集できるサンプルを追加しました。\n\nテーマ編集用に用意された特別なモジュールを組み合わせて、ヘッダーやフッター、パンくず、ナビゲーションなどのレイアウトを編集できます。\n",
+           "editor": "markdown"
+          }
+         },
+         "anchor": "",
+         "dec": ""
+        }
+       ]
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "### px2-sitemapexcel の変換方向を xlsx -> csv のみになる設定を追加\n\nこれまでのサイトマップは、 CSV と xlsx のタイムスタンプを比較し、新しい方の内容をもとに古い方のファイルを上書きする仕様でした。\n\nこの振る舞いは、 Git 等のバージョン管理システムと組み合わせた場合などに、タイムスタンプが更新され、しばしば意図しない方向への変換が起きる現象の原因となってきました。\n\n今回のリリースでは、この変換方向を、タイムスタンプに拠らず xlsx から CSV への一方向が保証される設定に変更しています。\n\nこの設定は、 `config.php` の181行目付近に書かれています。\n\n```\n// sitemapExcel\n'tomk79\\pickles2\\sitemap_excel\\pickles_sitemap_excel::exec('.json_encode(array(\n\t// `master_format`\n\t// マスターにするファイルフォーマットを指定します。\n\t//   - `timestamp` = タイムスタンプが新しい方をマスターにする(デフォルト)\n\t//   - `xlsx` = XLSXをマスターにする\n\t//   - `csv` = CSVをマスターにする\n\t//   - `pass` = 変換しない\n\t// のいずれかを指定します。\n\t'master_format'=>'xlsx',\n\n\t// `files_master_format`\n\t// ファイル名ごとにマスターにするファイルフォーマットを指定します。\n\t// ここに設定されていないファイルは、 `master_format` の設定に従います。\n\t'files_master_format'=>array(\n\t\t// 'timestamp_sitemap'=>'timestamp',\n\t\t// 'csv_master_sitemap'=>'csv',\n\t\t// 'xlsx_master_sitemap'=>'xlsx',\n\t\t// 'no_convert'=>'pass',\n\t),\n)).')' ,\n```\n\n既存のプロジェクトに同じ設定を反映するには、この記述を参考に `'master_format'=>'xlsx'` の設定を追加してください。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "### Bootstrap、 normalize.css を削除\n\nこれまでのバージョンで含まれていた、 Bootstrap や normalize.css などのフロントエンドのフレームワークが削除されました。\n\nフロントエンドフレームワークは、本来 プロジェクト個別に、またはモジュール、テーマによって自由に選択されるべきものです。\nところが、オリジナルのコードにこれらが含まれていることで、 Bootstrap や normalize.css に依存することが前提であるという誤解を与えるリスクを懸念し、削除しました。\n\nそのぶん、スタート時点のコード量が減り、シンプルに始められるようになったと思います。\n\nPickles 2 が Bootstrap や normalize.css を否定する意図ではありません。 プロジェクト固有の自由な方針に従って、必要なフレームワークを選択し導入してください。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     },
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "## 導入手順\n\n[プロジェクトのセットアップ](http://pickles2.pxt.jp/manual/setup/projects.html) のページを参照してください。 2018年4月24日 以降に作成したプロジェクトでは、自動的に最新版である 2.0.11 が適用されます。\n\nそれ以前にセットアップしたプロジェクトには適用されません。個別の変更差分を参考に、プロジェクトのコードを修正してください。\n",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     }
+    ]
+   }
+  }
+ }
+}

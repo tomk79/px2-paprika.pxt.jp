@@ -1,0 +1,22 @@
+{
+ "bowl": {
+  "main": {
+   "modId": "_sys/root",
+   "fields": {
+    "main": [
+     {
+      "modId": "PlainHTMLElements:PlainHTML/MultiText",
+      "fields": {
+       "main": {
+        "src": "Asazuke は、既存のウェブサイトをクロールし、 Pickles 2 プロジェクトに加工して取り込みます。\n\n現在、githubで開発中です。\n\n- <a href=\"https://github.com/pickles2/asazuke\" target=\"_blank\">pickles2/asazuke</a>\n- <a href=\"https://github.com/pickles2/electron-asazuke\" target=\"_blank\">pickles2/electron-asazuke</a>",
+        "editor": "markdown"
+       }
+      },
+      "anchor": "",
+      "dec": ""
+     }
+    ]
+   }
+  }
+ }
+}

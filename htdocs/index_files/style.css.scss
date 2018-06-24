@@ -1,0 +1,25 @@
+.platform{
+    text-align: center;
+}
+.cont_download-for-platforms{
+    margin: 5px auto 5px auto;
+
+    ul{
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+        li{
+            padding: 0;
+            margin: 0;
+            display: inline;
+            list-style-type: none;
+            &:after{
+                content: " / ";
+            }
+            &:last-child:after{
+                content: "";
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<?php
+	require_once( __DIR__.'/php/custom.php' );
+	$theme_custom = new pickles2\themes\pickles\theme_custom($px, $theme);
+?><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title><?= htmlspecialchars($px->site()->get_current_page_info('title_full')); ?></title>
+<?php include(__DIR__.'/inc/headsection.inc'); ?>
+<?= $px->bowl()->pull('head') ?>
+	</head>
+	<body class="plain">
+<?= $px->bowl()->pull() ?>
+<?php include(__DIR__.'/inc/footsection.inc'); ?>
+<?= $px->bowl()->pull('foot') ?>
+	</body>
+</html>
