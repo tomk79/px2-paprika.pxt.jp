@@ -62,6 +62,9 @@ return call_user_func( function(){
 
 		'/phpdoc/*' => 'pass' ,
 
+		'*.php' => 'php' , // <- for Paprika
+		'*.php/*' => 'php' , // <- for Paprika
+
 		'*.html' => 'html' ,
 		'*.htm' => 'html' ,
 		'*.css' => 'css' ,
@@ -120,6 +123,9 @@ return call_user_func( function(){
 
 		// PX=px2dthelper
 		'tomk79\pickles2\px2dthelper\main::register' ,
+
+		// Paprika - PHPアプリケーションフレームワーク
+		'tomk79\pickles2\paprikaFramework2\main::exec()' ,
 	];
 
 
@@ -167,6 +173,12 @@ return call_user_func( function(){
 		// output_encoding, output_eol_coding の設定に従ってエンコード変換する。
 		'picklesFramework2\processors\encodingconverter\encodingconverter::exec' ,
 	];
+
+	$conf->funcs->processor->php = array(
+		// for Paprika
+		// html のデフォルトの処理を追加
+		$conf->funcs->processor->html ,
+	);
 
 	$conf->funcs->processor->css = [
 		// output_encoding, output_eol_coding の設定に従ってエンコード変換する。
