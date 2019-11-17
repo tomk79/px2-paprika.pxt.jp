@@ -1,7 +1,7 @@
 "Paprika Framework Official Website" Source
 =========
 
-これは、 Paprika Framework の 公式情報サイト [Paprika Framework](http://px2-paprika.pxt.jp/) のサイトデータです。
+これは、 Paprika Framework の 公式情報サイト [Paprika Framework](https://px2-paprika.pxt.jp/) のサイトデータです。
 Pickles 2 を使って編集されています。
 
 ## セットアップ手順 - Setup
@@ -31,16 +31,16 @@ $ composer update
 
 ## ディレクトリ構成
 
-- `htdocs/` に、Pickles 2 のコンテンツデータが格納されています。
+- `src_px2/` に、Pickles 2 のコンテンツデータが格納されています。
   - このデータはソースデータなので、ウェブ上に直接公開されるものではありません。
 - パブリッシュデータは、 `dist/` に出力されます。
   - これをウェブサーバーに設置し、公開します。
   - `/?PX=publish.run` を実行してパブリッシュを行い、公開データを生成します。
-  - パブリッシュコマンドの扱い方については [パブリッシュ | Pickles 2](http://pickles2.pxt.jp/manual/publish/) を参照してください。
+  - パブリッシュコマンドの扱い方については [パブリッシュ | Pickles 2](https://pickles2.pxt.jp/manual/publish/) を参照してください。
 
 
 ## 作者 - Author
 
 - Tomoya Koyanagi <tomk79@gmail.com>
-- website: <http://www.pxt.jp/>
-- Twitter: @tomk79 <http://twitter.com/tomk79/>
+- website: <https://www.pxt.jp/>
+- Twitter: @tomk79 <https://twitter.com/tomk79/>
