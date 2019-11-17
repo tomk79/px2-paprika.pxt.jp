@@ -10,10 +10,6 @@
 
 <?= $px->get_contents_manifesto(); ?>
 
-		<!-- Adobe Typekit -->
-		<script src="https://use.typekit.net/erd0xqv.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
 		<!-- Bootstrap Theme -->
 		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/styles/bootstrap-theme.min.css') ); ?>">
 		<link rel="stylesheet" href="<?= htmlspecialchars( $theme->files('/styles/theme.css') ); ?>">

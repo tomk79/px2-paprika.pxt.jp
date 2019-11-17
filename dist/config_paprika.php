@@ -19,7 +19,7 @@ while(1){
 }
 unset($tmp_path_autoload);
 
-$paprika = new \tomk79\pickles2\paprikaFramework2\paprika(json_decode('{"file_default_permission":"775","dir_default_permission":"775","filesystem_encoding":"UTF-8","session_name":"PXSID","session_expire":1800,"directory_index":["index.html"],"realpath_controot":"./","realpath_controot_preview":"../htdocs/","realpath_homedir":"../htdocs/px-files/","path_controot":"/","realpath_files":"./config_paprika_files/","realpath_files_cache":"./caches/c/config_paprika_files/","realpath_files_private_cache":"../htdocs/px-files/_sys/ram/caches/c/config_paprika_files/"}'), false);
+$paprika = new \tomk79\pickles2\paprikaFramework2\paprika(json_decode('{"file_default_permission":"775","dir_default_permission":"775","filesystem_encoding":"UTF-8","session_name":"PXSID","session_expire":1800,"directory_index":["index.html"],"realpath_controot":"./","realpath_controot_preview":"../src_px2/","realpath_homedir":"../src_px2/px-files/","path_controot":"/","realpath_files":"./config_paprika_files/","realpath_files_cache":"./caches/c/config_paprika_files/","realpath_files_private_cache":"../src_px2/px-files/_sys/ram/caches/c/config_paprika_files/"}'), false);
 
 // 共通の prepend スクリプトを実行
 if(is_file($paprika->env()->realpath_homedir.'paprika_prepend.php')){
