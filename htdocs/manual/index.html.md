@@ -1,2 +1,2 @@
 
-<a href="https://github.com/tomk79/px2-paprika-fw-2.x" target="_blank">README</a> を参照してください。
+<a href="https://github.com/pickles2/px2-paprika" target="_blank">README</a> を参照してください。

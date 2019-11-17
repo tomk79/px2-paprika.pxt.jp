@@ -1,7 +1,7 @@
 .DS_Store
 Thumbs.db
 /vendor/
-composer.lock
+#composer.lock
 !*.gitkeep
 ~$*
 /node_modules/
