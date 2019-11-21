@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c1e1175e2131e9db28142749657d45d",
+    "content-hash": "c993287e6b1c9521e10bf2336f041d2e",
     "packages": [
         {
             "name": "broccoli-html-editor/broccoli-field-table",
@@ -641,8 +641,14 @@
             "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tomk79/px2-paprika-fw-2.x.git",
-                "reference": "67ecc6f0fe239d0948650f31f6039ba3ec090976"
+                "url": "https://github.com/pickles2/px2-paprika.git",
+                "reference": "5fa09cecafb5d419a05688828abc2196024fff98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pickles2/px2-paprika/zipball/5fa09cecafb5d419a05688828abc2196024fff98",
+                "reference": "5fa09cecafb5d419a05688828abc2196024fff98",
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
@@ -652,30 +658,23 @@
             "require-dev": {
                 "phpdocumentor/phpdocumentor": "^2.7.0",
                 "phpunit/phpunit": "^4.1.0",
-                "pickles2/broccoli-module-fess": "0.1.*",
-                "pickles2/broccoli-module-plain-html-elements": "0.1.*",
                 "pickles2/px-fw-2.x": "dev-develop",
                 "pickles2/px2-multitheme": "2.0.*",
                 "pickles2/px2-path-resolver": "2.0.*",
+                "pickles2/px2-publish-ex": "dev-develop",
                 "pickles2/px2-px2dthelper": "dev-develop",
                 "pickles2/px2-remove-attr": "2.0.*",
-                "pickles2/px2-sitemapexcel": "2.0.*",
-                "tomk79/excellent-db": "dev-develop",
-                "twig/twig": "^1.35"
+                "pickles2/px2-sitemapexcel": "2.0.*"
             },
             "type": "library",
             "autoload": {
                 "files": [
                     "php/main.php",
-                    "php/bowl.php",
-                    "php/paprika.php"
+                    "php/fw/bowl.php",
+                    "php/fw/paprika.php"
                 ]
             },
-            "scripts": {
-                "test": [
-                    "php ./vendor/phpunit/phpunit/phpunit"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -687,10 +686,9 @@
             ],
             "description": "Publishing Web Application with \"Pickles 2\".",
             "keywords": [
-                "pickles",
                 "pickles2"
             ],
-            "time": "2018-10-13T07:37:31+00:00"
+            "time": "2019-11-21T00:39:14+00:00"
         },
         {
             "name": "pickles2/px2-path-resolver",
@@ -1215,12 +1213,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "8208cc20fe677b0c423f948e5a9ba9349d22cd8a"
+                "reference": "badf167c2c0f5a4bdc522911ccd9a7f4e421178c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/8208cc20fe677b0c423f948e5a9ba9349d22cd8a",
-                "reference": "8208cc20fe677b0c423f948e5a9ba9349d22cd8a",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/badf167c2c0f5a4bdc522911ccd9a7f4e421178c",
+                "reference": "badf167c2c0f5a4bdc522911ccd9a7f4e421178c",
                 "shasum": ""
             },
             "require": {
@@ -1273,7 +1271,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-11-15T15:46:00+00:00"
+            "time": "2019-11-18T17:28:41+00:00"
         }
     ],
     "packages-dev": [],

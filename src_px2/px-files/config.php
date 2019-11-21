@@ -125,7 +125,7 @@ return call_user_func( function(){
 		'tomk79\pickles2\px2dthelper\main::register' ,
 
 		// Paprika - PHPアプリケーションフレームワーク
-		'tomk79\pickles2\paprikaFramework2\main::before_content('.json_encode( array(
+		'picklesFramework2\paprikaFramework\main::before_content('.json_encode( array(
 			// アプリケーションが動的に生成したコンテンツエリアの名称
 			'bowls'=>array('custom_area_1', 'custom_area_2', ),
 
@@ -182,7 +182,7 @@ return call_user_func( function(){
 
 	$conf->funcs->processor->php = array(
 		// Paprika - PHPアプリケーションフレームワーク
-		'tomk79\pickles2\paprikaFramework2\main::processor' ,
+		'picklesFramework2\paprikaFramework\main::processor' ,
 
 		// for Paprika
 		// html のデフォルトの処理を追加
@@ -242,6 +242,16 @@ return call_user_func( function(){
 
 	// config for Pickles2 Desktop Tool.
 	$conf->plugins->px2dt = new stdClass;
+
+    /**
+     * GUIエディタのエンジンの種類
+     * - `legacy` = 旧GUI編集ツール。(廃止)
+     * - `broccoli-html-editor` = NodeJSで実装された broccoli-html-editor を使用。
+     * - `broccoli-html-editor-php` = PHPで実装された broccoli-html-editor を使用。
+     */
+    $conf->plugins->px2dt->guiEngine = 'broccoli-html-editor-php';
+
+
 	$conf->plugins->px2dt->paths_module_template = [
 		"PlainHTMLElements" => "../vendor/broccoli-html-editor/broccoli-module-plain-html-elements/modules/",
 		"FESS" => "../vendor/broccoli-html-editor/broccoli-module-fess/modules/"
