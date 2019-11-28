@@ -474,12 +474,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/px-fw-2.x.git",
-                "reference": "d7046439c87fd8b4ae0a05f2691c0aeb155bb057"
+                "reference": "a91b83e4afe9485fda58ca18e53807a54167dfe5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/px-fw-2.x/zipball/d7046439c87fd8b4ae0a05f2691c0aeb155bb057",
-                "reference": "d7046439c87fd8b4ae0a05f2691c0aeb155bb057",
+                "url": "https://api.github.com/repos/pickles2/px-fw-2.x/zipball/a91b83e4afe9485fda58ca18e53807a54167dfe5",
+                "reference": "a91b83e4afe9485fda58ca18e53807a54167dfe5",
                 "shasum": ""
             },
             "require": {
@@ -533,7 +533,7 @@
                 "pickles",
                 "pickles2"
             ],
-            "time": "2019-11-07T01:31:58+00:00"
+            "time": "2019-11-26T00:40:29+00:00"
         },
         {
             "name": "pickles2/px2-dec",
@@ -642,12 +642,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pickles2/px2-paprika.git",
-                "reference": "5fa09cecafb5d419a05688828abc2196024fff98"
+                "reference": "ec23a0d8f73c95b507c80c691ea6d505242762a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pickles2/px2-paprika/zipball/5fa09cecafb5d419a05688828abc2196024fff98",
-                "reference": "5fa09cecafb5d419a05688828abc2196024fff98",
+                "url": "https://api.github.com/repos/pickles2/px2-paprika/zipball/ec23a0d8f73c95b507c80c691ea6d505242762a1",
+                "reference": "ec23a0d8f73c95b507c80c691ea6d505242762a1",
                 "shasum": ""
             },
             "require": {
@@ -656,7 +656,8 @@
                 "tomk79/request": "^1.0"
             },
             "require-dev": {
-                "phpdocumentor/phpdocumentor": "^2.7.0",
+                "jms/serializer": "<1.8",
+                "phpdocumentor/phpdocumentor": "^2.9.0",
                 "phpunit/phpunit": "^4.1.0",
                 "pickles2/px-fw-2.x": "dev-develop",
                 "pickles2/px2-multitheme": "2.0.*",
@@ -671,6 +672,7 @@
                 "files": [
                     "php/main.php",
                     "php/fw/bowl.php",
+                    "php/fw/log.php",
                     "php/fw/paprika.php"
                 ]
             },
@@ -684,11 +686,11 @@
                     "email": "tomk79@gmail.com"
                 }
             ],
-            "description": "Publishing Web Application with \"Pickles 2\".",
+            "description": "Publishing Lightweight Web Application with \"Pickles 2\".",
             "keywords": [
                 "pickles2"
             ],
-            "time": "2019-11-21T00:39:14+00:00"
+            "time": "2019-11-28T14:21:58+00:00"
         },
         {
             "name": "pickles2/px2-path-resolver",
@@ -909,12 +911,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "550ebaac289296ce228a706d0867afc34687e3f4"
+                "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/550ebaac289296ce228a706d0867afc34687e3f4",
-                "reference": "550ebaac289296ce228a706d0867afc34687e3f4",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
+                "reference": "f8f0b461be3385e56d6de3dbb5a0df24c0c275e3",
                 "shasum": ""
             },
             "require": {
@@ -926,7 +928,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.12-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -959,7 +961,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2019-08-06T08:03:45+00:00"
+            "time": "2019-11-27T13:56:44+00:00"
         },
         {
             "name": "tomk79/csv2json",
@@ -1213,12 +1215,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "badf167c2c0f5a4bdc522911ccd9a7f4e421178c"
+                "reference": "3853841c9f15842894321c89b156124a2b1f5dc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/badf167c2c0f5a4bdc522911ccd9a7f4e421178c",
-                "reference": "badf167c2c0f5a4bdc522911ccd9a7f4e421178c",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3853841c9f15842894321c89b156124a2b1f5dc9",
+                "reference": "3853841c9f15842894321c89b156124a2b1f5dc9",
                 "shasum": ""
             },
             "require": {
@@ -1227,8 +1229,7 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/debug": "^3.4|^4.2",
-                "symfony/phpunit-bridge": "^4.4@dev|^5.0"
+                "symfony/phpunit-bridge": "^4.4|^5.0"
             },
             "type": "library",
             "extra": {
@@ -1271,7 +1272,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2019-11-18T17:28:41+00:00"
+            "time": "2019-11-28T14:02:09+00:00"
         }
     ],
     "packages-dev": [],
