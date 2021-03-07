@@ -446,7 +446,7 @@ td, th {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     height: 16em; }
-  @media all and (max-width: 460px) {
+  @media (max-width: 460px) {
   .contents .code pre {
     white-space: pre-wrap; } }
   .contents .date_list table {
@@ -468,7 +468,7 @@ td, th {
   .contents .date_list table thead {
     text-align: center;
     display: none; }
-  @media all and (max-width: 460px) {
+  @media (max-width: 460px) {
   .contents .date_list table {
     width: auto;
     display: block;
@@ -604,23 +604,23 @@ td, th {
   .contents .cols .cols-last {
     float: right;
     *margin-right: -10px; }
-  @media all and (max-width: 520px) {
+  @media (max-width: 520px) {
   .contents .cols .cols-col.cols-3of4 {
     width: auto;
     float: none; } }
-  @media all and (max-width: 520px) {
+  @media (max-width: 520px) {
   .contents .cols .cols-col.cols-1of2 {
     width: auto;
     float: none; } }
-  @media all and (max-width: 520px) {
+  @media (max-width: 520px) {
   .contents .cols .cols-col.cols-2of3 {
     width: auto;
     float: none; } }
-  @media all and (max-width: 520px) {
+  @media (max-width: 520px) {
   .contents .cols .cols-col.cols-1of3 {
     width: auto;
     float: none; } }
-  @media all and (max-width: 520px) {
+  @media (max-width: 520px) {
   .contents .cols .cols-col.cols-1of4 {
     width: auto;
     float: none; } }
@@ -703,11 +703,11 @@ td, th {
     height: auto; }
   .contents .thumb_list li:nth-child(4n+1) {
     clear: left; }
-  @media all and (max-width: 520px) {
+  @media (max-width: 520px) {
   .contents .thumb_list li {
     width: 33%;
     *width: 32.9%; } }
-  @media all and (max-width: 420px) {
+  @media (max-width: 420px) {
   .contents .thumb_list li {
     width: 50%;
     *width: 49.9%; } }

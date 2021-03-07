@@ -42,7 +42,7 @@ body.top .theme_header {
   background-color: #fff;
   padding: 18px 1em 1em;
   margin-top: 71px; }
-  @media all and (max-width: 580px) {
+  @media (max-width: 580px) {
   .theme_mainblock {
     padding-left: 5px;
     padding-right: 5px; } }
@@ -104,7 +104,7 @@ body.top .theme_mainblock {
             color: #000;
             background-color: #fff; }
 
-@media all and (max-width: 580px) {
+@media (max-width: 580px) {
   .theme_globalnavi {
     display: none; } }
 /**
@@ -136,7 +136,7 @@ body.top .theme_mainblock {
             color: #000;
             background-color: #fff; }
 
-@media all and (max-width: 580px) {
+@media (max-width: 580px) {
   .theme_shouldernavi {
     display: none; } }
 /**
@@ -148,10 +148,10 @@ h1 {
   margin-top: 1.5em;
   margin-bottom: 1em;
   font-weight: normal; }
-  @media all and (min-width: 1000px) {
+  @media (min-width: 1000px) {
   h1 {
     font-size: 330%; } }
-  @media all and (max-width: 580px) {
+  @media (max-width: 580px) {
   h1 {
     font-size: 240%; } }
 
@@ -160,10 +160,10 @@ h1 {
   padding-right: 0;
   margin-bottom: 3em;
   font-size: 110%; }
-  @media all and (min-width: 1000px) {
+  @media (min-width: 1000px) {
   .contents {
     font-size: 120%; } }
-  @media all and (max-width: 580px) {
+  @media (max-width: 580px) {
   .contents {
     font-size: 100%; } }
   .contents h2 {
@@ -218,7 +218,7 @@ h1 {
     background-color: transparent;
     color: inherit;
     overflow: visible; }
-    @media all and (max-width: 340px) {
+    @media (max-width: 340px) {
   .contents pre code {
     white-space: pre-wrap;
     word-break: break-all;
